@@ -10,16 +10,20 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.5.3",
     "@radix-ui/react-avatar": "^1.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "g": "^2.0.1",
     "lucide-react": "^0.279.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-icons": "^4.11.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/node": "latest",
