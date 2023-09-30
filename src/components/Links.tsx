@@ -1,5 +1,3 @@
-import React from "react";
-
 type LinkProps = {
   children: React.ReactNode;
   olink: string;

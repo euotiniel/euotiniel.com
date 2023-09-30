@@ -1,7 +1,10 @@
 import LineBreak from '../components/LineBreak.tsx'
 import Title from '../components/Title.tsx'
 import Links from '../components/Links.tsx'
+import Link from "next/link";
 import Sicial from '../components/Social.tsx'
+import Subtitle from '../components/Subtitle.tsx'
+import articlesBlog from '../data/articles.blog.ts'
 
 <Title>Blog</Title>
 
@@ -11,6 +14,9 @@ Aqui você poderá encontrar um pouco do que eu escrevo, seja por conta própria
 
 <LineBreak />
 
-
-
-
+{articlesBlog.map((article) => 
+    <Link href={`/blog/articles/${article.id}`} key={article.id}>
+    <Subtitle>{article.name}</ Subtitle>
+    <p style={{ fontStyle: 'italic', marginTop: '-7px', marginBottom: '20px' }} className="text-sm text-gray-500 ">{article.data}</p>
+</Link>
+)}
