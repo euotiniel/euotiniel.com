@@ -11,7 +11,7 @@ import {
 
 export default function Social() {
   return (
-    <ul className="flex flex-row gap-5">
+    <ul className="flex flex-col sm:flex-row gap-5">
       <li>
         <Link
           href="https://github.com/euotiniel"
