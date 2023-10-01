@@ -8,7 +8,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/src/components/ui/rounded-avatar";
-import { BsArrowBarLeft } from "react-icons/bs"
+import { BsArrowBarLeft } from "react-icons/bs";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Footer from "@/src/components/Footer";
@@ -43,10 +43,15 @@ export default function Page({ params }: any) {
 
   return (
     <Container>
-        <div className="flex flex-row items-center justify-between">
-            <Link href="/blog/" className="text-muted-foreground leading-6 tracking-normal"><BsArrowBarLeft size="20" /></Link>
-            <div></div>
-        </div>
+      <div className="flex flex-row items-center justify-between">
+        <Link
+          href="/blog/"
+          className="text-muted-foreground leading-6 tracking-normal"
+        >
+          <BsArrowBarLeft size="20" />
+        </Link>
+        <div></div>
+      </div>
       <div className="flex flex-col items-center justify-center text-center mt-20">
         <small className="text-sm text-gray-400">{props.fontMatter.date}</small>
         <h2 className="mt-1 md:mt-2 scroll-m-20 pb-1 text-2xl md:text-3xl font-extrabold tracking-tight transition-colors first:mt-0">

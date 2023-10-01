@@ -6,10 +6,9 @@ import Layout from "@/src/Layout";
 import Title from "@/src/components/Title";
 import Subtitle from "@/src/components/Subtitle";
 import LineBreak from "@/src/components/LineBreak";
-import Links from '@/src/components/Links';
 
 export default function Home() {
-  const blogDir = "src/content/articles"; // Atualize o caminho para a nova pasta
+  const blogDir = "src/content/articles";
 
   const files = fs.readdirSync(path.join(blogDir));
 

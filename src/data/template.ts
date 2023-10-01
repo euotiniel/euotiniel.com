@@ -1,0 +1,20 @@
+const templates = [
+    {
+        id: 1,
+        name: 'Template 1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        link: 'https://github.com/',
+        tech: 'TypeScript',
+        stars: '59'
+    },
+    {
+        id: 2,
+        name: 'Template 2',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        link: 'https://github.com/',
+        tech: 'TypeScript',
+        stars: '35'
+    },
+];
+
+export default templates;

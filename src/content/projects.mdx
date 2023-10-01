@@ -3,6 +3,11 @@ import Title from '../components/Title.tsx'
 import Subtitle from '../components/Subtitle.tsx'
 import Links from '../components/Links.tsx'
 import Sicial from '../components/Social.tsx'
+import Projects from '../components/Projects.tsx'
+import actualFoucos from '../data/actual-foucos.ts';
+import Scripts from '../data/scripts.ts';
+import Implemented from '../data/implemented.ts';
+import Templates from '../data/template.ts'
 
 <Title>Projectos</Title>
 
@@ -12,17 +17,18 @@ Sim, eu também desenvolvo alguns projectos.
 
 <Subtitle>Foco actual</Subtitle>
 
-Esses projectos 
+<Projects projectsData={actualFoucos} />
 
 <Subtitle>Implementados</Subtitle>
 
-Esses projectos 
+<Projects projectsData={Implemented} />
 
-<Subtitle>Código aberto</Subtitle>
+<Subtitle>Templates</Subtitle>
 
-Esses projectos 
+<Projects projectsData={Templates} />
 
 <Subtitle>Scipts</Subtitle>
 
-Esses projectos 
+<Projects projectsData={Scripts} />
+
 
