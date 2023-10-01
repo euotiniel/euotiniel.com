@@ -12,7 +12,7 @@ import {
 export default function Social() {
   return (
     <ul className="flex flex-col sm:flex-row gap-2">
-      <li>
+      <li data-cursor="block">
         <Link
           href="https://github.com/euotiniel"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
@@ -22,7 +22,7 @@ export default function Social() {
           <span className="ml-1">github</span>
         </Link>
       </li>
-      <li>
+      <li data-cursor="block">
         <Link
           href="https://linkedin.com/euotiniel"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
@@ -32,7 +32,7 @@ export default function Social() {
           <span className="ml-1">linkedin</span>
         </Link>
       </li>
-      <li>
+      <li data-cursor="block">
         <Link
           href="https://x.com/euotiniel"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
@@ -42,7 +42,7 @@ export default function Social() {
           <span className="ml-1">twitter</span>
         </Link>
       </li>
-      <li>
+      <li data-cursor="block">
         <Link
           href="https://instagram.com/euotiniel"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
@@ -52,7 +52,7 @@ export default function Social() {
           <span className="ml-1">instagram</span>
         </Link>
       </li>
-      <li>
+      <li data-cursor="block">
         <Link
           href="https://facebook.com/euotiniel"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
@@ -62,7 +62,7 @@ export default function Social() {
           <span className="ml-1">facebook</span>
         </Link>
       </li>
-      <li>
+      <li data-cursor="block">
         <Link
           href="/"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"

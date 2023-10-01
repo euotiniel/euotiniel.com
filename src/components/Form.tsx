@@ -83,7 +83,7 @@ export default function SimpleForm() {
       </div>
 
       {/* Use a variável "submitting" para desabilitar o botão durante o envio */}
-      <Button className="w-full sm:" type="submit" disabled={submitting}>
+      <Button className="w-full sm:" type="submit" disabled={submitting} data-cursor="block">
         {submitting ? "A enviar..." : "Enviar"}
       </Button>
     </form>

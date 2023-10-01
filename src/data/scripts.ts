@@ -13,6 +13,13 @@ const scripts = [
         link: 'https://github.com/euotiniel/web-project-template-basic',
         tech: 'Batchfile',
     },
+    {
+        id: 3,
+        name: 'settings.json-vscode',
+        description: 'User settings JSON do meu VSCode. ',
+        link: 'https://github.com/euotiniel/settings.json-vscode',
+        tech: 'Json',
+    },
 ];
 
 export default scripts;

@@ -24,6 +24,7 @@
     "clsx": "^2.0.0",
     "g": "^2.0.1",
     "gray-matter": "^4.0.3",
+    "ipad-cursor": "^0.5.2",
     "lucide-react": "^0.279.0",
     "next": "latest",
     "next-mdx-remote": "^4.4.1",
