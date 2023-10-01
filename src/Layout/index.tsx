@@ -16,7 +16,7 @@ export default function Layout({
 }) {
   return (
         <Container>
-          <header className="flex flex-row items-center justify-between">
+          <header className="flex flex-col items-center justify-between sm:flex-row">
             <div className="flex gap-4 items-center my-5">
               <Avatar>
                 <AvatarImage src="https://github.com/euotiniel.png" />
@@ -34,7 +34,7 @@ export default function Layout({
             </div>
 
             <nav>
-              <ul className="flex flex-row items-center gap-5 ">
+              <ul className="flex flex-row items-center gap-5 text-sm sm:text-base">
                 <li>
                   <Link href="/">Home</Link>
                 </li>
