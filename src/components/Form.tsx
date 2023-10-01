@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
-import { useState } from "react"; // Importe useState
+import { useState } from "react"; 
 
 import { Label } from "@/src/components/ui/label";
 import { Input } from "@/src/components/ui/input";
@@ -20,29 +20,25 @@ export default function SimpleForm() {
     formState: { errors },
   } = useForm<FormData>();
 
-  // Adicione um estado local para controlar o texto e a desabilitação do botão de envio
   const [submitting, setSubmitting] = useState(false);
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
-      setSubmitting(true); // Defina submitting como true ao iniciar o envio
+      setSubmitting(true); 
 
       const webhookUrl =
         "https://discord.com/api/webhooks/1158046821982146601/8igdjW-NPo2hoEqE3AOuQCOHJ-vxt0zzSjnBl58dyv6FPMWHakqTV_ijS8zxfLcJBcv-";
 
-      // Construa a mensagem a ser enviada para o Discord.
       const author = `Autor: ${data.username}`;
       const mensagem = `Mensagem: ${data.message}`;
 
-      // Enviar mensagem para o Discord via webhook.
       await axios.post(webhookUrl, { content: `${author}\n${mensagem}` });
 
-      // Limpar o formulário após o envio bem-sucedido.
       reset();
     } catch (error) {
       console.error("Erro ao enviar mensagem para o Discord:", error);
     } finally {
-      setSubmitting(false); // Defina submitting como false após o envio ou em caso de erro
+      setSubmitting(false); 
     }
   };
 
@@ -82,7 +78,6 @@ export default function SimpleForm() {
         )}
       </div>
 
-      {/* Use a variável "submitting" para desabilitar o botão durante o envio */}
       <Button className="w-full sm:" type="submit" disabled={submitting} data-cursor="block">
         {submitting ? "A enviar..." : "Enviar"}
       </Button>

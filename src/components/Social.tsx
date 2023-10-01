@@ -24,7 +24,7 @@ export default function Social() {
       </li>
       <li data-cursor="block">
         <Link
-          href="https://linkedin.com/euotiniel"
+          href="https://www.linkedin.com/in/euotiniel/"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 hover:border-gray-500"
           target="_blank"
         >

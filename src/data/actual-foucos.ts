@@ -2,7 +2,7 @@ const actualFoucos = [
     {
         id: 1,
         name: 'Teste',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         link: 'https://github.com/',
         tech: 'TypeScript',
         stars: '345'
@@ -10,7 +10,7 @@ const actualFoucos = [
     {
         id: 2,
         name: 'Teste',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         link: 'https://github.com/',
         tech: 'TypeScript',
         stars: '345'
