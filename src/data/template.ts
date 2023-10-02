@@ -24,7 +24,7 @@ const templates = [
         id: 4,
         name: 'Perguntas front-end',
         description: 'FAQ com resposta a algumas das 120 perguntas sobre front-end',
-        link: 'https://github.com/euotiniel/perguntas-front-end',
+        link: 'https://perguntas-front-end.vercel.app/',
         tech: 'TypeScript',
     },
     {

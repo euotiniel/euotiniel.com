@@ -9,7 +9,8 @@ export default function Footer() {
           &copy; 2023 Otoniel Emanuel -{" "}
           <Link
             href="https://github.com/euotiniel"
-            className="border-b transition-all duration-500 hover:border-gray-400"
+            className="border-b transition-all duration-500 hover:border-gray-400 px-2 py-1"
+            data-cursor="block" 
           >
             MIT License
           </Link>
