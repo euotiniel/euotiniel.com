@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
       <div className="mt-9 sm:mb-3">
         <small className="text-sm font-normal leading-none">
-          Made with ❤️ and coffee
+          Made with <span data-cursor="block">❤️</span> and coffee
         </small>
       </div>
     </footer>
