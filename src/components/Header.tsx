@@ -19,7 +19,7 @@ export default function Header() {
             data-cursor="block"
             data-cursor-style="background: rgba(0, 0, 0, 0.295)"
           >
-            <AvatarImage src="https://github.com/euotiniel.png" />
+            <AvatarImage src="https://github.com/euotiniel.png" alt="Logotipo Otoniel Emanuel" />
             <AvatarFallback>OE</AvatarFallback>
           </Avatar>
 

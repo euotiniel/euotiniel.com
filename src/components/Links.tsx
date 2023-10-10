@@ -1,6 +1,6 @@
 type LinkProps = {
   children: React.ReactNode;
-  olink: string;
+  olink?: string;
 };
 
 export default function Links({ children, olink }: LinkProps) {
