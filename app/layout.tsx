@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={inter.className}>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <ThemeProvider
             attribute="class"
             defaultTheme="system"

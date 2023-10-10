@@ -14,24 +14,24 @@ export default function Header() {
   return (
     <IPadCursorProvider config={config}>
       <header className="flex flex-col items-center justify-between sm:flex-row">
-        <div className="flex gap-4 items-center my-5">
+        <div className="flex gap-2 items-center my-5">
           <Avatar
             data-cursor="block"
             data-cursor-style="background: rgba(0, 0, 0, 0.295)"
           >
-            <AvatarImage src="https://github.com/euotiniel.png" alt="Logotipo Otoniel Emanuel" />
+            <AvatarImage src="/image/euotiniel-avatar.png" alt="Logotipo Otoniel Emanuel" />
             <AvatarFallback>OE</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col items-start justify-start">
             <span
-              className="text-base font-extrabold tracking-tight lg:text-base"
+              className="text-sm font-extrabold tracking-tight lg:text-sm"
               data-cursor="text"
             >
               I&apos;am Oto
             </span>
             <span
-              className="text-xs font-normal tracking-tight lg:text-sm"
+              className="text-xs font-light tracking-tight lg:text-sm"
               data-cursor="text"
             >
               @euotiniel
@@ -53,7 +53,7 @@ export default function Header() {
               <Link href="/blog" className="p-1">Blog</Link>
             </li>
             <li data-cursor="block" data-cursor-style="border-radius: 5px">
-              <Link href="/guestbook" className="p-1">GuestBook</Link>
+              <Link href="/secretbook" className="p-1">SecretBook</Link>
             </li>
             <li data-cursor="block" data-cursor-style="border-radius: 5px">
               <ModeToggle />
