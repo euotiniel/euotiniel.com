@@ -32,7 +32,7 @@ const templates = [
         name: 'Rick and Morty APP',
         description: 'Website que mostra algumas inormações sobre os personagens de Rick and Morty',
         link: 'https://app-rick-and-morty-psi.vercel.app/',
-        tech: 'TypeScript',
+        tech: 'JavaScript',
     },
     {
         id: 6,
@@ -44,9 +44,9 @@ const templates = [
     {
         id: 7,
         name: 'polyglotProgramming',
-        description: 'Coleção de exercícios populares de programação resolvidos em várias linguagens',
+        description: 'Exercícios populares de programação resolvidos em várias linguagens',
         link: 'https://github.com/euotiniel/polyglotProgramming',
-        tech: 'TypeScript',
+        tech: 'Java',
     },
 ];
 

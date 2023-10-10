@@ -49,6 +49,7 @@ export default function SimpleForm() {
         <Input
           type="text"
           id="username"
+          placeholder="anonimo"
           {...register("username", {
             required: "Este campo é obrigatório.",
             minLength: {
@@ -65,6 +66,7 @@ export default function SimpleForm() {
         <Label>Mensagem:</Label>
         <Textarea
           id="message"
+          placeholder="Queria poder trabalhar com você e tomar um café..."
           {...register("message", {
             required: "Este campo é obrigatório.",
             minLength: {

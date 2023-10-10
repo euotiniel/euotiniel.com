@@ -1,15 +1,15 @@
 
-**[euotiniel.com]()**
+**[euotiniel.com](https://eotiniel.com)**
 
-meu website pessoal
+my personal website
 
 <p align="">
-  <samp>
+  <spam>
     <a href="">me</a> .
-    <a href="">projectos</a> .
+    <a href="">projects</a> .
     <a href="">blog</a> .
-    <a href="">guestbook</a> 
-  </samp>
+    <a href="">secretbook</a> 
+  </spam>
 </p>
 
 techs:
@@ -19,4 +19,4 @@ techs:
 - shadcn-ui
 - mdx
 
-<samp>licença - <a href='./LICENSE'>MIT</a>
+<spam>license - <a href='./LICENSE'>MIT</a> </spam>

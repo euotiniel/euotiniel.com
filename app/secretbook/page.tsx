@@ -2,13 +2,13 @@
 
 import Layout from "@/src/Layout";
 import { MDXProvider } from "@mdx-js/react";
-import GuestBook from "@/src/content/gestbook.mdx";
+import SecretBook from "@/src/content/secretbook.mdx";
 
 export default function page() {
   return (
     <Layout>
       <MDXProvider components={{}}>
-        <GuestBook />
+        <SecretBook />
       </MDXProvider>
     </Layout>
   );

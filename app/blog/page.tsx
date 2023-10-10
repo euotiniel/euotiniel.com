@@ -31,10 +31,10 @@ export default function Home() {
           <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
             <div className="mb-8">
               <Subtitle>{truncateText(blog.meta.title, 50)}</Subtitle>
-              <p className="text-gray-400 text-base">
+              <p className="text-gray-400 text-sm">
                 {truncateText(blog.meta.description, 80)}
               </p>
-              <small className="my-auto text-gray-400">{blog.meta.date}</small>
+              <small className="my-auto text-gray-400 text-xs italic">{blog.meta.date}</small>
             </div>
           </Link>
         ))}

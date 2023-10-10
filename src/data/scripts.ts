@@ -16,7 +16,7 @@ const scripts = [
     {
         id: 3,
         name: 'settings.json-vscode',
-        description: 'User settings JSON do meu VSCode',
+        description: 'User settings JSON para o VSCode',
         link: 'https://github.com/euotiniel/settings.json-vscode',
         tech: 'Json',
     },
