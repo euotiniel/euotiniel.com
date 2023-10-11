@@ -4,15 +4,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 
-import { IPadCursorProvider, useIPadCursor } from "ipad-cursor/react";
-import type { IpadCursorConfig } from "ipad-cursor";
-
 export default function Header() {
-  const config: IpadCursorConfig = {};
-  useIPadCursor();
 
   return (
-    <IPadCursorProvider config={config}>
       <header className="flex flex-col items-center justify-between sm:flex-row">
         <div className="flex gap-2 items-center my-5">
           <Avatar
@@ -61,6 +55,5 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-    </IPadCursorProvider>
   );
 }

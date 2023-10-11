@@ -4,6 +4,9 @@ import * as React from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
+import { IPadCursorProvider, useIPadCursor } from "ipad-cursor/react";
+import type { IpadCursorConfig } from "ipad-cursor";
+
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -15,7 +18,11 @@ import {
 export function ModeToggle() {
   const { setTheme } = useTheme();
 
+  const config: IpadCursorConfig = {};
+  useIPadCursor();
+
   return (
+    <IPadCursorProvider config={config}>
     <DropdownMenu data-cursor="block">
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
@@ -36,5 +43,6 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+    </IPadCursorProvider>
   );
 }

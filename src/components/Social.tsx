@@ -17,7 +17,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoGithub size="20" />
+          <BiLogoGithub size="18" />
           <span className="ml-1">github</span>
         </Link>
       </li>
@@ -27,7 +27,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoLinkedinSquare size="20" />
+          <BiLogoLinkedinSquare size="18" />
           <span className="ml-1">linkedin</span>
         </Link>
       </li>
@@ -37,7 +37,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoTwitter size="20" />
+          <BiLogoTwitter size="18" />
           <span className="ml-1">twitter</span>
         </Link>
       </li>
@@ -47,7 +47,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoInstagramAlt size="20" />
+          <BiLogoInstagramAlt size="18" />
           <span className="ml-1">instagram</span>
         </Link>
       </li>
@@ -57,7 +57,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoFacebookSquare size="20" />
+          <BiLogoFacebookSquare size="18" />
           <span className="ml-1">facebook</span>
         </Link>
       </li>

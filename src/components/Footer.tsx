@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Links from "./Links";
 import React from "react";
 
 export default function Footer() {
@@ -6,14 +6,7 @@ export default function Footer() {
     <footer className="flex flex-col md:flex-row sm:flex-col items-center justify-between border-t my-8 md:my-14">
       <div className="mt-9 sm:mb-3">
         <small className="text-sm font-normal leading-none">
-          &copy; 2023 Otoniel Emanuel -{" "}
-          <Link
-            href="https://github.com/euotiniel"
-            className="border-b transition-all duration-500 hover:border-gray-400 px-2 py-1"
-            data-cursor="block" 
-          >
-            MIT License
-          </Link>
+          2023 Built by <Links olink="https://twitter.com/euotiniel">@euotiniel</Links> . Hosted on <Links olink="https://vercel.com/">Vercel</Links>{" "}
         </small>
       </div>
       <div className="mt-9 sm:mb-3">
