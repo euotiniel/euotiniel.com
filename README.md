@@ -1,22 +1,22 @@
 
 **[euotiniel.com](https://eotiniel.com)**
 
-my personal website
+ <samp>my personal website</samp>
 
 <p align="">
-  <spam>
+  <samp>
     <a href="">me</a> .
     <a href="">projects</a> .
     <a href="">blog</a> .
     <a href="">secretbook</a> 
-  </spam>
+  </samp>
 </p>
 
 techs:
-
-- next js
+<br />
+- next js 
 - tailwindCSS
 - shadcn-ui
 - mdx
 
-<spam>license - <a href='./LICENSE'>MIT</a> </spam>
+<samp>license - <a href='./LICENSE'>MIT</a></samp>
