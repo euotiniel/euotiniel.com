@@ -49,7 +49,7 @@ export default function SimpleForm() {
         <Input
           type="text"
           id="username"
-          placeholder="anonimo"
+          placeholder="anônimo"
           {...register("username", {
             required: "Este campo é obrigatório.",
             minLength: {

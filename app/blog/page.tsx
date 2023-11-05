@@ -29,7 +29,7 @@ export default function Home() {
       <div>
         {blogs.map((blog) => (
           <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
-            <div className="mb-8">
+            <div className="mb-5">
               <Subtitle>{truncateText(blog.meta.title, 50)}</Subtitle>
               <p className="text-gray-400 text-sm">
                 {truncateText(blog.meta.description, 80)}
