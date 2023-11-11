@@ -5,10 +5,10 @@
 
 <p align="">
   <samp>
-    <a href="">me</a> .
-    <a href="">projects</a> .
-    <a href="">blog</a> .
-    <a href="">secretbook</a> 
+    <a href="https://euotiniel.com/" target="_blank">me</a> .
+    <a href="https://euotiniel.com/projects" target="_blank">projects</a> .
+    <a href="https://euotiniel.com/blog" target="_blank">blog</a> .
+    <a href="https://euotiniel.com/secretbook" target="_blank">secretbook</a> 
   </samp>
 </p>
 
