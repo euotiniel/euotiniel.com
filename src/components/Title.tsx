@@ -1,5 +1,3 @@
-import React from "react";
-
 type SubtitleProps = {
   children: React.ReactNode;
 };

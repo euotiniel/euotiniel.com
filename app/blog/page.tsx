@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import Link from "next/link";
 import Layout from "@/src/Layout";
 import Title from "@/src/components/Title";
-import Subtitle from "@/src/components/Subtitle";
 import LineBreak from "@/src/components/LineBreak";
 
 export default function Home() {

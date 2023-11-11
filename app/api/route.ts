@@ -10,7 +10,6 @@ const bodySchema = z.object({
 const WENHOOK_URL = process.env.WEBHOOK_URL!;
 
 export async function POST(request: Request) {
-
   const body = await request.json();
   const { nome, mensagem } = bodySchema.parse(body);
   const messageData = {

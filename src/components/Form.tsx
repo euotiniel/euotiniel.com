@@ -14,9 +14,7 @@ const contactFormSchema = z.object({
   nome: z
     .string()
     .min(3, { message: "O nome deve ter pelo menos 3 caracteres" }),
-  mensagem: z
-    .string()
-    .min(1, { message: "A mensagem não pode estar vazia" }),
+  mensagem: z.string().min(1, { message: "A mensagem não pode estar vazia" }),
 });
 
 type contactFormData = z.infer<typeof contactFormSchema>;
