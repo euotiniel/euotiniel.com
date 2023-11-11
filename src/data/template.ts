@@ -9,7 +9,7 @@ const templates = [
     {
         id: 2,
         name: 'Translate this',
-        description: 'Tradução dinamica de um texto em 4 linguas usando i18n',
+        description: 'Tradução dinamica de um texto em 4 linguas',
         link: 'https://translate-this-ten.vercel.app/',
         tech: 'TypeScript',
     },
@@ -36,17 +36,17 @@ const templates = [
     },
     {
         id: 6,
-        name: 'xlsx-py',
-        description: 'Código python que gera um registro com 100 usuários aleatório em um arquivo excel',
-        link: 'https://github.com/euotiniel/xlsx-py',
-        tech: 'Python',
-    },
-    {
-        id: 7,
         name: 'polyglotProgramming',
         description: 'Exercícios populares de programação resolvidos em várias linguagens',
         link: 'https://github.com/euotiniel/polyglotProgramming',
         tech: 'Java',
+    },
+    {
+        id: 7,
+        name: 'Coach app',
+        description: 'Guarde e lembre-se das suas citações motivacionais',
+        link: 'https://github.com/euotiniel/polyglotProgramming',
+        tech: 'TypeScript',
     },
 ];
 
