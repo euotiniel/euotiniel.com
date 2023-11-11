@@ -1,86 +1,85 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useState } from "react";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { useState } from "react"; 
+import toast from "react-hot-toast";
 
 import { Label } from "@/src/components/ui/label";
 import { Input } from "@/src/components/ui/input";
 import { Textarea } from "@/src/components/ui/textarea";
 import { Button } from "@/src/components/ui/button";
 
-type FormData = {
-  username: string;
-  message: string;
-};
+const contactFormSchema = z.object({
+  nome: z
+    .string()
+    .min(3, { message: "O nome deve ter pelo menos 3 caracteres" }),
+  mensagem: z
+    .string()
+    .min(1, { message: "A mensagem não pode estar vazia" }),
+});
 
-export default function SimpleForm() {
+type contactFormData = z.infer<typeof contactFormSchema>;
+
+export default function GuestBookForm() {
   const {
     handleSubmit,
     register,
     reset,
-    formState: { errors },
-  } = useForm<FormData>();
+    formState: { isSubmitting, errors },
+  } = useForm<contactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
 
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit: SubmitHandler<FormData> = async (data) => {
+  const onSubmit = async (data: contactFormData) => {
     try {
-      setSubmitting(true); 
-
-      const webhookUrl =
-        "https://discord.com/api/webhooks/1158046821982146601/8igdjW-NPo2hoEqE3AOuQCOHJ-vxt0zzSjnBl58dyv6FPMWHakqTV_ijS8zxfLcJBcv-";
-
-      const author = `Autor: ${data.username}`;
-      const mensagem = `Mensagem: ${data.message}`;
-
-      await axios.post(webhookUrl, { content: `${author}\n${mensagem}` });
-
+      setSubmitting(true);
+      await axios.post("/api", data);
+      toast.success("Mensagem enviada com sucesso!");
       reset();
     } catch (error) {
-      console.error("Erro ao enviar mensagem para o Discord:", error);
+      console.error("Erro ao enviar mensagem.", error);
+      toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
     } finally {
-      setSubmitting(false); 
+      setSubmitting(false);
     }
   };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div className="flex flex-col gap-5">
-        <Label>Nome:</Label>
+        <Label htmlFor="nome">Nome:</Label>
+
         <Input
           type="text"
-          id="username"
+          id="nome"
+          {...register("nome")}
           placeholder="anônimo"
-          {...register("username", {
-            required: "Este campo é obrigatório.",
-            minLength: {
-              value: 3,
-              message: "O nome deve conter pelo menos 3 caracteres.",
-            },
-          })}
         />
-        {errors.username && (
-          <small className="text-red-600">{errors.username.message}</small>
-        )}
-      </div>
-      <div className="flex flex-col gap-5">
-        <Label>Mensagem:</Label>
-        <Textarea
-          id="message"
-          placeholder="Queria poder trabalhar com você e tomar um café..."
-          {...register("message", {
-            required: "Este campo é obrigatório.",
-            minLength: {
-              value: 3,
-              message: "A mensagem deve conter pelo menos 3 caracteres.",
-            },
-          })}
-        />
-        {errors.message && (
-          <small className="text-red-600">{errors.message.message}</small>
+        {errors.nome && (
+          <small className="text-red-500">{errors.nome.message}</small>
         )}
       </div>
 
-      <Button className="w-full sm:" type="submit" disabled={submitting} data-cursor="block">
+      <div className="flex flex-col gap-5">
+        <Label>Mensagem:</Label>
+        <Textarea
+          spellCheck={false}
+          {...register("mensagem")}
+          placeholder="Deixe sua mensagem aqui..."
+        />
+        {errors.mensagem && (
+          <small className="text-red-500">{errors.mensagem.message}</small>
+        )}
+      </div>
+
+      <Button
+        className="w-full"
+        type="submit"
+        disabled={isSubmitting}
+        data-cursor="block"
+      >
         {submitting ? "A enviar..." : "Enviar"}
       </Button>
     </form>
