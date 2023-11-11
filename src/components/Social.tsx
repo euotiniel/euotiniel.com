@@ -7,10 +7,21 @@ import {
   BiLogoInstagramAlt,
   BiLogoFacebookSquare,
 } from "react-icons/bi";
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs"
 
 export default function Social() {
   return (
     <ul className="flex flex-col md:flex-row gap-3">
+      <li data-cursor="block">
+        <Link
+          href="/otoniel-emanuel-cv.pdf"
+          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          target="_blank"
+        >
+          <BsFillFileEarmarkPdfFill size="18" />
+          <span className="ml-1">CV</span>
+        </Link>
+      </li>
       <li data-cursor="block">
         <Link
           href="https://github.com/euotiniel"
