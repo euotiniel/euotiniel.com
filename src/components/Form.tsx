@@ -34,17 +34,18 @@ export default function GuestBookForm() {
   const [submitting, setSubmitting] = useState(false);
 
   const onSubmit = async (data: contactFormData) => {
-    try {
-      setSubmitting(true);
-      await axios.post("/api", data);
-      toast.success("Mensagem enviada com sucesso!");
-      reset();
-    } catch (error) {
-      console.error("Erro ao enviar mensagem.", error);
-      toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
-    } finally {
-      setSubmitting(false);
-    }
+    // try {
+    //   setSubmitting(true);
+    //   await axios.post("/api", data);
+    //   toast.success("Mensagem enviada com sucesso!");
+    //   reset();
+    // } catch (error) {
+    //   console.error("Erro ao enviar mensagem.", error);
+    //   toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
+    // } finally {
+    //   setSubmitting(false);
+    // }
+    await axios.post("/api", data);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
