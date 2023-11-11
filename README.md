@@ -1,14 +1,14 @@
 
 **[euotiniel.com](https://eotiniel.com)**
 
- <samp>my personal website</samp>
+ <samp>My personal website</samp>
 
 <p align="">
   <samp>
-    <a href="https://euotiniel.com/" target="_blank">me</a> .
-    <a href="https://euotiniel.com/projects" target="_blank">projects</a> .
-    <a href="https://euotiniel.com/blog" target="_blank">blog</a> .
-    <a href="https://euotiniel.com/secretbook" target="_blank">secretbook</a> 
+    <a href="https://euotiniel.com/">me</a> .
+    <a href="https://euotiniel.com/projects">projects</a> .
+    <a href="https://euotiniel.com/blog">blog</a> .
+    <a href="https://euotiniel.com/secretbook">secretbook</a> 
   </samp>
 </p>
 
