@@ -62,7 +62,7 @@ export default function Page({ params }: any) {
         </p>
         <div className="mt-2 md:mt-4">
           <Link
-            href="https://github.com/euotiniel"
+            href="https://twitter.com/euotiniel"
             className="flex flex-row gap-2 items-center justify-center"
           >
             <Avatar>
