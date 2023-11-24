@@ -11,15 +11,16 @@ export default function Home() {
 
   const files = fs.readdirSync(path.join(blogDir));
 
-  const blogs = files.map((filename) => {
-    const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8");
-
-    const { data: frontMatter } = matter(fileContent);
-    return {
-      meta: frontMatter,
-      slug: filename.replace(".mdx", ""),
-    };
-  });
+  const blogs = files
+    .map((filename) => {
+      const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8");
+      const { data: frontMatter } = matter(fileContent);
+      return {
+        meta: frontMatter,
+        slug: filename.replace(".mdx", ""),
+      };
+    })
+    .sort((a, b) => b.meta.id - a.meta.id); // Ordenação decrescente pelos IDs
 
   return (
     <Layout>
