@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/src/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://next-meta.vercel.app/'),
+  metadataBase: new URL('https://euotiniel.com/'),
   title: {
     default: 'Otoniel Emanuel',
     template: '%s | Otoniel Emanuel',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Otoniel Emanuel',
     description: 'Aspirante a desenvolvedor de software',
-    url: 'https://next-meta.vercel.app/',
+    url: 'https://euotiniel.com/',
     siteName: 'Otoniel Emanuel',
     locale: 'pt_PT',
     type: 'website',
