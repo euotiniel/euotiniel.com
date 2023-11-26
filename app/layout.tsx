@@ -6,10 +6,36 @@ import { ThemeProvider } from "@/src/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Otoniel Emanuel",
-  description: "Aspirante a desenvolvedor de software.",
+  metadataBase: new URL('https://next-meta.vercel.app/'),
+  title: {
+    default: 'Otoniel Emanuel',
+    template: '%s | Otoniel Emanuel',
+  },
+  description: 'Aspirante a desenvolvedor de software',
+  openGraph: {
+    title: 'Otoniel Emanuel',
+    description: 'Aspirante a desenvolvedor de software',
+    url: 'https://next-meta.vercel.app/',
+    siteName: 'Otoniel Emanuel',
+    locale: 'pt_PT',
+    type: 'website',
+  },
+   robots: {
+     index: true,
+     follow: true,
+     googleBot: {
+       index: true,
+       follow: true,
+       'max-video-preview': -1,
+       'max-image-preview': 'large',
+       'max-snippet': -1,
+     },
+   },
+  twitter: {
+    title: 'Otoniel Emanuel',
+    card: 'summary_large_image',
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
