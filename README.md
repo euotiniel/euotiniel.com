@@ -12,11 +12,4 @@
   </samp>
 </p>
 
-techs:
-<br />
-- next js 
-- tailwindcss
-- shadcn-ui
-- mdx
-
 <samp>license - <a href='./LICENSE'>MIT</a></samp>
