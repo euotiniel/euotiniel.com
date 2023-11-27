@@ -18,7 +18,7 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BsFillFileEarmarkPdfFill size="18" />
+          <BsFillFileEarmarkPdfFill size="16" />
           <span className="ml-1">CV</span>
         </Link>
       </li>
