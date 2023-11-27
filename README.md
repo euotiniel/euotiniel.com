@@ -15,7 +15,7 @@
 techs:
 <br />
 - next js 
-- tailwindCSS
+- tailwindcss
 - shadcn-ui
 - mdx
 
