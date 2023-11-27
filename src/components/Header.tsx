@@ -27,7 +27,7 @@ export default function Header() {
             I&apos;am Oto
           </span>
           <span
-            className="text-xs font-light tracking-tight lg:text-sm"
+            className="text-[11px] font-light tracking-tight lg:text-sm"
             data-cursor="text"
           >
             @euotiniel
@@ -36,7 +36,7 @@ export default function Header() {
       </div>
 
       <nav>
-        <ul className="flex flex-row items-center gap-5 text-sm sm:text-base">
+        <ul className="flex flex-row items-center gap-2 text-sm sm:text-base">
           <li data-cursor="block" data-cursor-style="border-radius: 5px">
             <Link href="/" className="p-1">
               Home
