@@ -64,6 +64,7 @@ export default function Page({ params }: any) {
           <Link
             href="https://twitter.com/euotiniel"
             className="flex flex-row gap-2 items-center justify-center"
+            target="_blank"
           >
             <Avatar>
               <AvatarImage src="https://github.com/euotiniel.png" />
