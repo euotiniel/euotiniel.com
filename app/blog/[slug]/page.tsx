@@ -52,7 +52,7 @@ export default function Page({ params }: any) {
         </Link>
         <div></div>
       </div>
-      <div className="flex flex-col items-center justify-center text-center mt-20">
+      <div className="flex flex-col items-center justify-center text-center mt-10">
         <small className="text-sm text-gray-400">{props.fontMatter.date}</small>
         <h2 className="mt-1 md:mt-2 scroll-m-20 pb-1 text-2xl md:text-3xl font-extrabold tracking-tight transition-colors first:mt-0">
           {props.fontMatter.title}
