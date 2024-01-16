@@ -1,5 +1,5 @@
 
-**[euotiniel.com](https://eotiniel.com)**
+**[euotiniel.com](https://euotiniel.com)**
 
  <samp>My personal website</samp>
 
