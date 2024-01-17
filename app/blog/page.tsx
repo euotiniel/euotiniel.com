@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import Layout from "@/src/layout/index";
+import Layout from "@/src/layout";
 import Title from "@/src/components/Title";
 import LineBreak from "@/src/components/LineBreak";
 
