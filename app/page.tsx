@@ -1,6 +1,6 @@
 "use client";
 
-import Layout from "@/src/Layout";
+import Layout from "@/src/layout";
 import { MDXProvider } from "@mdx-js/react";
 import Iam from "@/src/content/iam.mdx";
 

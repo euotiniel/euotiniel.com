@@ -1,11 +1,11 @@
 const implemented = [
-    {
-        id: 1,
-        name: 'Kudika Digital',
-        description: 'Agência de Marketing e Publicidade',
-        link: 'https://github.com/euotiniel',
-        tech: 'TypeScript',
-    },
+    // {
+    //     id: 1,
+    //     name: 'Kudika Digital',
+    //     description: 'Agência de Marketing e Publicidade',
+    //     link: 'https://github.com/euotiniel',
+    //     tech: 'TypeScript',
+    // },
     {
         id: 2,
         name: 'BMinds',
@@ -17,7 +17,7 @@ const implemented = [
         id: 3,
         name: 'SAPP',
         description: 'Sistema de Auxílio de Projectos da PAP',
-        link: 'https://github.com/euotiniel',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7105292648080404480/',
         tech: 'Blade',
     },
     {

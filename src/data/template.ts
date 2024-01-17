@@ -6,13 +6,13 @@ const templates = [
         link: 'https://github.com/euotiniel/view-post',
         tech: 'TypeScript',
     },
-    {
-        id: 2,
-        name: 'Translate this',
-        description: 'Tradução dinamica de um texto em 4 linguas',
-        link: 'https://translate-this-ten.vercel.app/',
-        tech: 'TypeScript',
-    },
+    // {
+    //     id: 2,
+    //     name: 'Translate this',
+    //     description: 'Tradução dinamica de um texto em 4 linguas',
+    //     link: 'https://translate-this-ten.vercel.app/',
+    //     tech: 'TypeScript',
+    // },
     {
         id: 3,
         name: 'Template aleatório',
@@ -41,13 +41,13 @@ const templates = [
         link: 'https://github.com/euotiniel/polyglotProgramming',
         tech: 'Java',
     },
-    {
-        id: 7,
-        name: 'Coach app',
-        description: 'Guarde e lembre-se das suas citações motivacionais',
-        link: 'https://github.com/euotiniel/polyglotProgramming',
-        tech: 'TypeScript',
-    },
+    // {
+    //     id: 7,
+    //     name: 'Coach app',
+    //     description: 'Guarde e lembre-se das suas citações motivacionais',
+    //     link: 'https://github.com/euotiniel/polyglotProgramming',
+    //     tech: 'TypeScript',
+    // },
 ];
 
 export default templates;
