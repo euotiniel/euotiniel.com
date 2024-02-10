@@ -1,15 +1,21 @@
 "use client";
 
-import Layout from "@/src/layout/index";
 import { MDXProvider } from "@mdx-js/react";
 import Iam from "@/src/content/iam.mdx";
+import Container from "@/src/components/Container";
+import Header from "@/src/components/Header";
+import Footer from "@/src/components/Footer";
 
 export default function page() {
   return (
-    <Layout>
-      <MDXProvider components={{}}>
-        <Iam />
-      </MDXProvider>
-    </Layout>
+    <Container>
+      <Header />
+      <div className="my-12">
+        <MDXProvider components={{}}>
+          <Iam />
+        </MDXProvider>
+      </div>
+      <Footer />
+    </Container>
   );
 }
