@@ -1,18 +1,20 @@
-"use client"
+"use client";
 import "./globals.css";
-import type { Metadata } from "next";
+import { IPadCursorProvider, useIPadCursor } from "ipad-cursor/react";
+import type { IpadCursorConfig } from "ipad-cursor";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/src/components/ThemeProvider";
-import { MDXProvider } from '@mdx-js/react';
+import { MDXProvider } from "@mdx-js/react";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const config: IpadCursorConfig = {};
+  useIPadCursor();
   return (
     <html lang="pt">
       <body className={inter.className}>
@@ -23,9 +25,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MDXProvider>
-          {children}
-          </MDXProvider>
+          <IPadCursorProvider config={config}>
+            <MDXProvider>{children}</MDXProvider>
+          </IPadCursorProvider>
         </ThemeProvider>
       </body>
     </html>
