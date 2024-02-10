@@ -2,6 +2,8 @@ import Container from "@/src/components/Container";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
 
+// Unavailable
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Container>
