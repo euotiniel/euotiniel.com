@@ -2,9 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import Layout from "@/src/layout/index";
 import Title from "@/src/components/Title";
 import LineBreak from "@/src/components/LineBreak";
+import Container from "@/src/components/Container";
+import Header from "@/src/components/Header";
+import Footer from "@/src/components/Footer";
 
 export default function Home() {
   const blogDir = "src/content/articles";
@@ -23,7 +25,9 @@ export default function Home() {
     .sort((a, b) => b.meta.id - a.meta.id); 
 
   return (
-    <Layout>
+    <Container>
+      <Header />
+      <div className="my-12">
       <Title>Blog</Title>
       <LineBreak />
       <div>
@@ -43,7 +47,9 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </Layout>
+      </div>
+      <Footer />
+    </Container>
   );
 }
 
