@@ -13,7 +13,7 @@
 </p>
 
 - Follow the metrics <a href="https://pagespeed.web.dev/analysis/https-euotiniel-com/9pk8zy658m?form_factor=desktop">here</a>
-- <a herf="https://www.opengraph.xyz/url/https%3A%2F%2Feuotiniel.com%2F">OG Reviews</a>
+- <a href="https://www.opengraph.xyz/url/https%3A%2F%2Feuotiniel.com%2F" targe>OG Reviews</a>
 
 <img src="/public/image/cover-md.png" alt="cover" />
 
