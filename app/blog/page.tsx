@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import Layout from "@/src/layout/index";
 import Title from "@/src/components/Title";
 import LineBreak from "@/src/components/LineBreak";
 
@@ -23,7 +22,7 @@ export default function Home() {
     .sort((a, b) => b.meta.id - a.meta.id); 
 
   return (
-    <Layout>
+      <>
       <Title>Blog</Title>
       <LineBreak />
       <div>
@@ -43,7 +42,7 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </Layout>
+      </>
   );
 }
 
