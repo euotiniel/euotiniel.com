@@ -43,6 +43,9 @@ export default function Page({ params }: any) {
 
   return (
     <Container>
+      <head>
+        <title>{props.fontMatter.title}</title>
+      </head>
       <div className="flex flex-row items-center justify-between">
         <Link
           href="/blog/"

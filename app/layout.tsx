@@ -9,19 +9,15 @@ import { MDXProvider } from "@mdx-js/react";
 
 interface RootLayoutProps {
   children: ReactNode;
-  title?: string;
 }
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children, title }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   const config: IpadCursorConfig = {};
   useIPadCursor();
   return (
     <html lang="pt">
-      <head>
-        <title>{title}</title>
-      </head>
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeProvider
