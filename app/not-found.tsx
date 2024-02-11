@@ -9,6 +9,9 @@ import Footer from "@/src/components/Footer";
 export default function page() {
   return (
     <Container>
+      <head>
+        <title>404 - Página não encontrada</title>
+      </head>
       <Header />
       <div className="my-12">
         <MDXProvider components={{}}>

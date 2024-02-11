@@ -15,38 +15,44 @@ export default function Home() {
 
   const blogs = files
     .map((filename) => {
-      const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8");
+      const fileContent = fs.readFileSync(
+        path.join(blogDir, filename),
+        "utf-8"
+      );
       const { data: frontMatter } = matter(fileContent);
       return {
         meta: frontMatter,
         slug: filename.replace(".mdx", ""),
       };
     })
-    .sort((a, b) => b.meta.id - a.meta.id); 
+    .sort((a, b) => b.meta.id - a.meta.id);
 
   return (
     <Container>
+      <head>
+        <title>Otoniel Emanuel - Blog</title>
+      </head>
       <Header />
       <div className="my-12">
-      <Title>Blog</Title>
-      <LineBreak />
-      <div>
-        {blogs.map((blog) => (
-          <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
-            <div className="mb-5">
-              <h2 className="mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 pb-2 font-bold text-base sm:text-base md:text-base lg:text-lg xl:text-lg tracking-tight first:mt-0">
-                {truncateText(blog.meta.title, 55)}
-              </h2>
-              <p className="text-gray-400 text-sm">
-                {truncateText(blog.meta.description, 80)}
-              </p>
-              <small className="my-auto text-gray-400 text-xs italic">
-                {blog.meta.date}
-              </small>
-            </div>
-          </Link>
-        ))}
-      </div>
+        <Title>Blog</Title>
+        <LineBreak />
+        <div>
+          {blogs.map((blog) => (
+            <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
+              <div className="mb-5">
+                <h2 className="mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 pb-2 font-bold text-base sm:text-base md:text-base lg:text-lg xl:text-lg tracking-tight first:mt-0">
+                  {truncateText(blog.meta.title, 55)}
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  {truncateText(blog.meta.description, 80)}
+                </p>
+                <small className="my-auto text-gray-400 text-xs italic">
+                  {blog.meta.date}
+                </small>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <Footer />
     </Container>
