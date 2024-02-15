@@ -21,7 +21,7 @@ export default function Header() {
       </div>
 
       <nav>
-        <ul className="flex flex-row items-center gap-2 text-sm sm:text-sm">
+        <ul className="flex flex-row items-center gap-2 text-sm sm:text-base">
           <li data-cursor="block" data-cursor-style="border-radius: 5px">
             <Link href="/" className="p-1">
               Home

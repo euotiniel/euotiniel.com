@@ -39,7 +39,7 @@ export function ModeToggle() {
         <span className="text-xs">Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <span className="text-sm">System</span>
+          <span className="text-xs">System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
