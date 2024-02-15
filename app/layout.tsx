@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

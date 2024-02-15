@@ -18,25 +18,10 @@ export default function Header() {
           />
           <AvatarFallback>OE</AvatarFallback>
         </Avatar>
-
-        <div className="flex flex-col items-start justify-start">
-          <span
-            className="text-sm font-extrabold tracking-tight lg:text-sm"
-            data-cursor="text"
-          >
-            I&apos;am Oto
-          </span>
-          <span
-            className="text-[11px] font-light tracking-tight lg:text-sm"
-            data-cursor="text"
-          >
-            @euotiniel
-          </span>
-        </div>
       </div>
 
       <nav>
-        <ul className="flex flex-row items-center gap-2 text-sm sm:text-base">
+        <ul className="flex flex-row items-center gap-2 text-sm sm:text-sm">
           <li data-cursor="block" data-cursor-style="border-radius: 5px">
             <Link href="/" className="p-1">
               Home
