@@ -1,13 +1,4 @@
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { BsStar } from 'react-icons/bs';
 
 interface ProjectData {
   id: number;
@@ -23,29 +14,29 @@ interface ProjectsProps {
 
 export default function Projects({ projectsData }: ProjectsProps) {
   return (
-    <div className="flex flex-wrap gap-3 py-5">
-      {projectsData.map((data) => 
-        <Link href={data.link} key={data.id} target="_blank" data-cursor="block">
-          <Card className="p-4">
-            <CardHeader>
-              <CardTitle>{data.name}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
+    <div className="flex flex-col gap-8">
+      {projectsData.map((data) => (
+        <Link
+          href={data.link}
+          key={data.id}
+          target="_blank"
+        >
+          <div className="flex flex-row items-center justify-between">
+            <div>
+              <h4 className="scroll-m-20 text-base font-semibold tracking-tight">
+                {data.name}
+              </h4>
+              <p className="text-sm text-muted-foreground">
                 {data.description}
-              </CardDescription>
-            </CardContent>
-            <CardFooter className="flex flex-row justify-between items-center">
-              <small>
-                <span className="text-gray-500">tech:</span> {data.tech}
-              </small>
-              <small className="flex flex-row items-center gap-2">
-                <BsStar size="15" /> 
-              </small>
-            </CardFooter> 
-          </Card>
+              </p>
+            </div>
+
+            <div className="">
+              <p className="leading-7 text-sm [&:not(:first-child)]:mt-6">{data.tech}</p>
+            </div>
+          </div>
         </Link>
-      )}
+      ))}
     </div>
   );
 }

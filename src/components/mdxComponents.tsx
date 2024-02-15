@@ -11,5 +11,5 @@ export const mdxComponents = {
   Links,
   Social,
   GuestBookForm,
-  Projects,
+  Projects
 };

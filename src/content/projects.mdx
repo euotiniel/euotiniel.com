@@ -1,34 +1,17 @@
 import LineBreak from '../components/LineBreak.tsx'
 import Title from '../components/Title.tsx'
-import Subtitle from '../components/Subtitle.tsx'
 import Links from '../components/Links.tsx'
 import Projects from '../components/Projects.tsx'
-import Scripts from '../data/scripts.ts';
-import Implemented from '../data/implemented.ts';
-import Templates from '../data/template.ts'
+import AllProjects from '../data/projects'
 
 <Title>Projectos</Title>
 
 <LineBreak />
 
-Sim, também desenvolvo alguns projectos. Eu trabalho com Vue, Next, Astro..., bom, básicamente uma pequena parte dos frameworks JS. Recentemente descobri uma paixão por Markdown, não sei bem o motivo, mas é interessante usar MD/MDX.
-
-<Subtitle>Foco actual</Subtitle>
-
-Se estiver a ler isso provavelmente os meus projectos actuais são privados ou não. Além dos destacados aqui, alguns dos outros projectos que desenvolvi podem ser encontrados no meu <Links olink="https://github.com/euotiniel">GitHub</Links>, dê uma olhada.
+Aqui estão alguns dos projetos em que trabalhei, listado sem nenhuma ordem específica. Se você quiser explorar mais projetos ou ver detalhes adicionais, sinta-se à vontade para visitar meus repositórios no <Links olink="https://github.com/euotiniel?tab=repositories">GitHub</Links>. 
 
 <LineBreak />
 
-<Subtitle>Implementados</Subtitle>
-
-<Projects projectsData={Implemented} />
-
-<Subtitle>Templates e outros</Subtitle>
-
-<Projects projectsData={Templates} />
-
-<Subtitle>Scripts</Subtitle>
-
-<Projects projectsData={Scripts} />
+<Projects projectsData={AllProjects} />
 
 
