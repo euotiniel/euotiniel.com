@@ -40,7 +40,7 @@ export default function Home() {
           {blogs.map((blog) => (
             <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
               <div className="mb-5">
-                <h2 className="mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 pb-2 font-semibold text-sm sm:text-sm md:text-sm lg:text-base xl:text-base">
+                <h2 className="mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 pb-2 font-semibold text-base sm:text-base md:text-base lg:text-lg xl:text-lg">
                   {truncateText(blog.meta.title, 55)}
                 </h2>
                 <p className="text-gray-400 text-sm opacity-40">

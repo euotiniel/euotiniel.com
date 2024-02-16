@@ -13,8 +13,9 @@ export default function Header() {
           data-cursor-style="background: rgba(0, 0, 0, 0.295)"
         >
           <AvatarImage
-            src="/image/euotiniel-avatar.png"
+            src="/image/euotiniel-cover.png"
             alt="Logotipo Otoniel Emanuel"
+            className="dark:invert"
           />
           <AvatarFallback>OE</AvatarFallback>
         </Avatar>
