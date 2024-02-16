@@ -42,9 +42,9 @@ export default function Header() {
               SecretBook
             </Link>
           </li>
-          {/* <li data-cursor="block" data-cursor-style="border-radius: 5px">
+          <li data-cursor="block" data-cursor-style="border-radius: 5px">
             <ModeToggle />
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>
