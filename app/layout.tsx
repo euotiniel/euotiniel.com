@@ -6,7 +6,7 @@ import type { IpadCursorConfig } from "ipad-cursor";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/src/components/ThemeProvider";
 import { MDXProvider } from "@mdx-js/react";
-
+import { Toaster } from "@/src/components/ui/toaster"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react';
 
@@ -31,6 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <IPadCursorProvider config={config}>
             <MDXProvider>{children}</MDXProvider>
+            <Toaster />
             <Analytics />
             <SpeedInsights />
           </IPadCursorProvider>

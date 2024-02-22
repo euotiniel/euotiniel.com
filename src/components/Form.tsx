@@ -3,8 +3,8 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import toast from "react-hot-toast";
 
+import { useToast } from "@/src/components/ui/use-toast"
 import { Label } from "@/src/components/ui/label";
 import { Input } from "@/src/components/ui/input";
 import { Textarea } from "@/src/components/ui/textarea";
@@ -20,6 +20,8 @@ const contactFormSchema = z.object({
 type contactFormData = z.infer<typeof contactFormSchema>;
 
 export default function GuestBookForm() {
+  const { toast } = useToast()
+
   const {
     handleSubmit,
     register,
@@ -35,11 +37,17 @@ export default function GuestBookForm() {
     try {
       setSubmitting(true);
       await axios.post("/api", data);
-      toast.success("Mensagem enviada com sucesso!");
+      toast({
+        title: `Mensagem enviada com sucesso! 🎉`,
+        description: `Olá, ${data.nome}. Obrigado pela sua mensagem.`,
+      })
       reset();
     } catch (error) {
       console.error("Erro ao enviar mensagem.", error);
-      toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
+      toast({
+        title: "Erro ao enviar a sua mensagem!",
+        description: `Por favor, tente novamente...`,
+      })
     } finally {
       setSubmitting(false);
     }
