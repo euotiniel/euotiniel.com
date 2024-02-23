@@ -8,14 +8,11 @@ export default function Header() {
   return (
     <header className="flex flex-col items-center justify-between sm:flex-row">
       <div className="flex gap-2 items-center my-5">
-        <Avatar
-          data-cursor="block"
-          data-cursor-style="background: rgba(0, 0, 0, 0.295)"
-        >
+        <Avatar>
           <AvatarImage
             src="/image/euotiniel-cover.png"
             alt="Logotipo Otoniel Emanuel"
-            className="dark:invert"
+            className="select-none dark:invert"
           />
           <AvatarFallback>OE</AvatarFallback>
         </Avatar>

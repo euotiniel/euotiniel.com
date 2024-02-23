@@ -3,13 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import Container from "@/src/components/Container";
 import Link from "next/link";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/src/components/ui/rounded-avatar";
 import { BsArrowBarLeft } from "react-icons/bs";
 
+import { CustomMDX } from "@/src/components/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Footer from "@/src/components/Footer";
 
@@ -65,7 +61,7 @@ export default function Page({ params }: any) {
         </p>
       </div>
       <article className="mt-16">
-        <MDXRemote source={props.content}></MDXRemote>
+        <CustomMDX source={props.content} />
       </article>
       <Footer />
     </Container>

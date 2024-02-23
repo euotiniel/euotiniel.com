@@ -33,7 +33,7 @@ export default function Home() {
         <title>Otoniel Emanuel - Blog</title>
       </head>
       <Header />
-      <div className="my-12">
+      <div className="my-10">
         <Title>Blog</Title>
         <LineBreak />
         <div>

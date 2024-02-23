@@ -13,7 +13,7 @@ export default function page() {
         <title>Otoniel Emanuel</title>
       </head>
       <Header />
-      <div className="my-12">
+      <div className="my-10">
         <MDXProvider components={{}}>
           <Iam />
         </MDXProvider>
