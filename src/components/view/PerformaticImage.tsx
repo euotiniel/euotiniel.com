@@ -1,9 +1,10 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
+import ImageContainer from './ImageContainer';
 
-export default function PerformaticImage({src,alt,className}:HTMLImageElement) {
+export default function PerformaticImage(props:HTMLImageElement) {
     
-    const imageRef = useRef(null)
+    const figureRef = useRef(null)
     const [visible,setVisible] = useState(false);
 
     useEffect(()=>{
@@ -13,15 +14,15 @@ export default function PerformaticImage({src,alt,className}:HTMLImageElement) {
                 setVisible(true)
             }
         })
-        if(imageRef.current)
-        observer.observe(imageRef.current)
+        if(figureRef.current)
+        observer.observe(figureRef.current)
         
         return () => observer.disconnect();
     },[])
 
     return (
-        <figure ref={imageRef}>
-            {visible ? <img src={src} alt={alt} className={className}/> : <div className='w-full h-96 bg-black bg-opacity-20 backdrop-blur-sm animate-pulse rounded-sm'/>}
+        <figure ref={figureRef}>
+            {visible && <ImageContainer {...props}/>}
         </figure>
     )
 }
