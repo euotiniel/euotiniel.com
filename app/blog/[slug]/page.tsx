@@ -58,7 +58,7 @@ export default function Page({ params }: any) {
           {props.fontMatter.description}
         </p>
       </div>
-      <article className="my-16">
+      <article className="mt-14 mb-28">
         <CustomMDX source={props.content} />
       </article>
     </Container>
