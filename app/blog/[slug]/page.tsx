@@ -6,8 +6,6 @@ import Link from "next/link";
 import { BsArrowBarLeft } from "react-icons/bs";
 
 import { CustomMDX } from "@/src/components/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import Footer from "@/src/components/Footer";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join("src/content/articles"));
@@ -60,10 +58,9 @@ export default function Page({ params }: any) {
           {props.fontMatter.description}
         </p>
       </div>
-      <article className="mt-16">
+      <article className="mt-14 mb-28">
         <CustomMDX source={props.content} />
       </article>
-      <Footer />
     </Container>
   );
 }

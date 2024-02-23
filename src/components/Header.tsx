@@ -19,28 +19,28 @@ export default function Header() {
       </div>
 
       <nav>
-        <ul className="flex flex-row items-center gap-2 text-sm sm:text-base">
-          <li data-cursor="block" data-cursor-style="border-radius: 5px">
+        <ul className="flex flex-row items-center gap-2 text-sm sm:text-[15px]">
+          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/" className="p-1">
               Home
             </Link>
           </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 5px">
+          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/projects" className="p-1">
               Projectos
             </Link>
           </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 5px">
+          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/blog" className="p-1">
               Blog
             </Link>
           </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 5px">
+          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/secretbook" className="p-1">
               SecretBook
             </Link>
           </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 5px">
+          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <ModeToggle />
           </li>
         </ul>
