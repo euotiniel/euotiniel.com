@@ -1,15 +1,13 @@
 
 **[euotiniel.com](https://euotiniel.com)**
 
- <samp>My personal website</samp>
+ My personal website
 
 <p align="">
-  <samp>
     <a href="https://euotiniel.com/">me</a> .
     <a href="https://euotiniel.com/projects">projects</a> .
     <a href="https://euotiniel.com/blog">blog</a> .
     <a href="https://euotiniel.com/secretbook">secretbook</a> 
-  </samp>
 </p>
 
 - Follow the metrics <a href="https://pagespeed.web.dev/analysis/https-euotiniel-com/gwgxojibiw?form_factor=mobile">here</a>
