@@ -16,4 +16,5 @@
 ![Imagem WhatsApp 2024-02-17 às 11 05 18_bf9d4399](https://github.com/euotiniel/euotiniel.com/assets/93485038/fb448b46-3ce2-4002-8c01-43f4f6cd8573)
 
 ---
-<samp>license - <a href='./LICENSE'>MIT</a></samp>
+
+This project is under the <a href='./LICENSE'>MIT</a> license
