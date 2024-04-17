@@ -5,7 +5,7 @@ import './global.css'
 import { GeistSans } from 'geist/font/sans';
 
 const meta = {
-  title: 'Otoniel Emanuel - Website',
+  title: 'Otoniel Emanuel',
   description:
     'Sleep deprived father. FE Engineer in China. Lover of Ramen and Kpop',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,

@@ -5,7 +5,7 @@ import Social from '@/components/social'
 export default function page() {
   return (
     <Layout>
-      <p>olá, sou o Otoniel Emanuel👋🏾</p>
+      <p>olá, sou o Otoniel Emanuel 👋🏾</p>
       <div className='prose prose-zinc dark:prose-invert text-zinc-800 dark:text-zinc-200 text-justify'>
         <p>
         <b>Desenvolvedor front-end</b>, entusiasta de código aberto e escritor. Actualmente, estou cursando Engenharia Informática

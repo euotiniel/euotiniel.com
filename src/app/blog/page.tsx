@@ -3,6 +3,31 @@ import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 import Layout from '@/components/layout/index'
 import Links from '@/components/links'
+import { WEBSITE_HOST_URL } from '@/lib/constants'
+import type { Metadata } from 'next'
+
+const meta = {
+  title: 'Blog',
+  description: 'Leia os meus artigos',
+  url: `${WEBSITE_HOST_URL}/about`,
+}
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.url,
+  },
+  twitter: {
+    title: meta.title,
+    description: meta.description,
+  },
+  alternates: {
+    canonical: meta.url,
+  },
+}
 
 export default function Blog() {
   const posts = allPosts.sort((a, b) =>
