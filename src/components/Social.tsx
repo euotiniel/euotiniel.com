@@ -10,16 +10,16 @@ import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 
 export default function Social() {
   return (
-    <ul className="flex flex-col md:flex-row gap-3">
+    <ul className="flex flex-col md:flex-row gap-3 pt-8">
       <li data-cursor="block">
-        <Link
+        <a
           href="/docs/otoniel-emanuel-cv.pdf"
           className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
-          target="_blank"
+          download
         >
           <BsFillFileEarmarkPdfFill size="16" />
           <span className="ml-1">resume</span>
-        </Link>
+        </a>
       </li>
       <li data-cursor="block">
         <Link

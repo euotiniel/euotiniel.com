@@ -1,42 +1,43 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-interface ProjectData {
-  id: number;
-  name: string;
-  description: string;
-  link: string;
-  tech: string;
+type ProjectData = {
+  id: number
+  name: string
+  description: string
+  link: string
+  tech: string
 }
 
-interface ProjectsProps {
-  projectsData: ProjectData[];
+type ProjectsProps = {
+  projectsData: ProjectData[]
 }
 
-export default function Projects({ projectsData }: ProjectsProps) {
+export default function projects({ projectsData }: ProjectsProps) {
   return (
-    <div className="flex flex-col gap-8">
-      {projectsData.map((data) => (
+    <div className="mt-8 flex flex-col gap-8">
+      {projectsData.map((proj) => (
         <Link
-          href={data.link}
-          key={data.id}
+          href={proj.link}
           target="_blank"
+          className="border-b pb-3"
+          title={proj.description}
+          key={proj.id}
         >
-          <div className="flex flex-row items-center justify-between">
-            <div>
+          <div className="flex flex-row items-center justify-between text-zinc-800 dark:text-zinc-200">
+            <div className="flex flex-col">
               <h4 className="scroll-m-20 text-base font-semibold tracking-tight">
-                {data.name}
+                {proj.name}
               </h4>
-              <p className="text-sm text-muted-foreground">
-                {data.description}
-              </p>
             </div>
 
             <div className="">
-              <p className="leading-7 text-sm [&:not(:first-child)]:mt-6">{data.tech}</p>
+              <p className="text-sm leading-7 [&:not(:first-child)]:mt-6">
+                {proj.tech}
+              </p>
             </div>
           </div>
         </Link>
       ))}
     </div>
-  );
+  )
 }

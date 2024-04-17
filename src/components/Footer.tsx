@@ -1,4 +1,4 @@
-import Links from "./Links";
+import Link from "@/components/links"
 
 export default function Footer() {
   return (
@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="mt-9 sm:mb-3">
         <small className="text-sm font-normal leading-none">
           2024 &copy;{" "}
-          <Links olink="https://twitter.com/euotiniel">euotiniel</Links> .
-          Hosted on <Links olink="https://vercel.com/"> ▲ </Links>{" "}
+          <Link olink="https://twitter.com/euotiniel">euotiniel</Link> .
+          Hosted on <Link olink="https://vercel.com/"> ▲ </Link>{" "}
         </small>
       </div>
     </footer>

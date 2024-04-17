@@ -1,27 +1,28 @@
-import { useState } from "react";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
+'use client'
+import { useState } from 'react'
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import axios from 'axios'
 
-import { useToast } from "@/src/components/ui/use-toast"
-import { Label } from "@/src/components/ui/label";
-import { Input } from "@/src/components/ui/input";
-import { Textarea } from "@/src/components/ui/textarea";
-import { Button } from "@/src/components/ui/button";
+import { useToast } from '@/components/ui/use-toast'
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
 
 const contactFormSchema = z.object({
   nome: z
     .string()
-    .min(3, { message: "O nome deve ter pelo menos 3 caracteres" }),
-  mensagem: z.string().min(1, { message: "A mensagem não pode estar vazia" }),
-});
+    .min(3, { message: 'O nome deve ter pelo menos 3 caracteres' }),
+  mensagem: z.string().min(1, { message: 'A mensagem não pode estar vazia' }),
+})
 
-type contactFormData = z.infer<typeof contactFormSchema>;
+type contactFormData = z.infer<typeof contactFormSchema>
 
-export default function GuestBookForm() {
+export default function Form() {
   const { toast } = useToast()
-
+  const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL
   const {
     handleSubmit,
     register,
@@ -29,29 +30,33 @@ export default function GuestBookForm() {
     formState: { isSubmitting, errors },
   } = useForm<contactFormData>({
     resolver: zodResolver(contactFormSchema),
-  });
+  })
 
-  const [submitting, setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false)
 
   const onSubmit = async (data: contactFormData) => {
     try {
-      setSubmitting(true);
-      await axios.post("/api", data);
-      toast({
-        title: `Mensagem enviada com sucesso! 🎉`,
-        description: `Olá, ${data.nome}. Obrigado pela sua mensagem.`,
+      setSubmitting(true)
+      await axios.post(WEBHOOK_URL, {
+        content: `Nome: ${data.nome}\nMensagem: ${data.mensagem}`,
       })
-      reset();
+      // toast({
+      //   title: `Mensagem enviada com sucesso! 🎉`,
+      //   description: `Olá, ${data.nome}. Obrigado pela sua mensagem.`,
+      // })
+      alert(`Olá, ${data.nome}. Obrigado pela sua mensagem.`)
+      reset()
     } catch (error) {
-      console.error("Erro ao enviar mensagem.", error);
-      toast({
-        title: "Erro ao enviar a sua mensagem!",
-        description: `Por favor, tente novamente...`,
-      })
+      console.error('Erro ao enviar mensagem.', error)
+      // toast({
+      //   title: 'Erro ao enviar a sua mensagem!',
+      //   description: `Por favor, tente novamente...`,
+      // })
+      alert("Erro ao enviar a sua mensagem! Por favor, tente mais tarde...")
     } finally {
-      setSubmitting(false);
+      setSubmitting(false)
     }
-  };
+  }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div className="flex flex-col gap-5">
@@ -60,7 +65,7 @@ export default function GuestBookForm() {
         <Input
           type="text"
           id="nome"
-          {...register("nome")}
+          {...register('nome')}
           placeholder="anônimo"
         />
         {errors.nome && (
@@ -72,7 +77,7 @@ export default function GuestBookForm() {
         <Label>Mensagem:</Label>
         <Textarea
           spellCheck={false}
-          {...register("mensagem")}
+          {...register('mensagem')}
           placeholder="Deixe sua mensagem aqui..."
         />
         {errors.mensagem && (
@@ -86,8 +91,8 @@ export default function GuestBookForm() {
         disabled={isSubmitting}
         data-cursor="block"
       >
-        {submitting ? "A enviar..." : "Enviar"}
+        {submitting ? 'A enviar...' : 'Enviar'}
       </Button>
     </form>
-  );
+  )
 }

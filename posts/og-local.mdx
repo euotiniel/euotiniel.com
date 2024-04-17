@@ -1,0 +1,29 @@
+---
+title: Testando meta tags localmente
+description: Conheça o OG-LOCAL e teste o SEO (OG) das suas aplicações localmente
+date: 2024-03-06
+---
+
+Manter seu website em destaque na web é crucial. Uma das maneiras mais eficazes de garantir isso é configurar corretamente o SEO do seu projeto. No entanto, ao longo da minha jornada de preocupação com SEO, me deparei com momentos frustrantes quando percebi que precisava fazer o deploy da aplicação para testar o nome, a imagem do open graph e tudo mais. E sim, ficar fazendo commit's e push's pode ser exaustivo.
+
+Decidi então criar um pequeno projeto para ajudar nesse aspecto, e assim surgiu o ```OG-local``` ! A ideia estava lá, faltava apenas o código e claro, batatas fritas.
+
+Visite: <a href="https://og-local.vercel.app/" className="border-b transition-all text-gray-500" target="_blank">OG local website</a>.
+
+<br />
+
+<Image
+  alt={`Bridge`}
+  src={`/images/blog/og-local.gif`}
+  width={1440}
+  height={960}
+  priority
+/>
+
+Basicamente, desenvolvi um código que pudesse verificar quais portas locais estavam abertas no computador. Com isso, a primeira fase estava concluída. Depois, com um pouco de JavaScript aqui e ali, consegui extrair as meta tags e listá-las no frontend. Voilà!
+
+Para a construção, optei por usar Vue.js, embora tenha tido que lidar com "JavaScript puro" também. Confesso que o processo de realização deste projeto foi bastante interessante. Preciso continuar testando e aprimorando-o, mas até agora, ele se saiu bem em ambientes com HTML, Vue.js, React.js, Astro.js e mais alguns.
+
+Você pode acessar o projeto ou contribuir no GitHub: <a href="https://github.com/euotiniel/og-local" className="border-b transition-all text-gray-500" target="_blank">euotiniel/og-local</a>.
+
+É isso! Espero que tenha gostado do artigo e do projeto. Sinta-se à vontade para fornecer feedback e entrar em contato comigo!

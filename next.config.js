@@ -1,11 +1,6 @@
+const { withContentlayer } = require('next-contentlayer')
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Suas configurações Next.js aqui, se necessário
-};
+const nextConfig = {}
 
-const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/, // Adicione as extensões de arquivo MDX que deseja suportar
-});
-
-module.exports = withMDX(nextConfig);
-
+module.exports = withContentlayer(nextConfig)
