@@ -3,6 +3,7 @@ import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import './global.css'
 import { GeistSans } from 'geist/font/sans';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const meta = {
   title: 'Otoniel Emanuel',
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
