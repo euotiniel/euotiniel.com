@@ -14,12 +14,12 @@ type ProjectsProps = {
 
 export default function projects({ projectsData }: ProjectsProps) {
   return (
-    <div className="mt-8 flex flex-col gap-8">
+    <div className="mt-8 flex flex-col gap-4">
       {projectsData.map((proj) => (
         <Link
           href={proj.link}
           target="_blank"
-          className="border-b pb-3"
+          className="border-b pb-2"
           title={proj.description}
           key={proj.id}
         >
