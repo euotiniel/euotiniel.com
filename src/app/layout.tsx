@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const meta = {
   title: 'Otoniel Emanuel',
   description:
-    'Sleep deprived father. FE Engineer in China. Lover of Ramen and Kpop',
+    'I want to put a ding in the universe ▲',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,
 }
 
