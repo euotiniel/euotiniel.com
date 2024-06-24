@@ -1,7 +1,8 @@
 import Layout from '@/components/layout/index'
 import Links from '@/components/links'
-import ProjectList from "@/components/projects"
+import ProjectList from '@/components/projects'
 import AllProjects from '@/data/projects'
+import Experiments from '@/data/experiments'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 
@@ -31,14 +32,24 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Layout>
-      <h4>Projectos</h4>
-      <p className='my-5 text-zinc-800 dark:text-zinc-200'>
-        Explore alguns dos meus projectos. Dê uma olhada no{' '}
-        <Links olink="https://github.com/euotiniel/">GitHub</Links>. outros
-        projecto de código aberto.
-      </p>
-      <div>
-       <ProjectList projectsData={AllProjects} />
+      <div className='flex flex-col gap-14'>
+        <div>
+          <h4>Projectos</h4>
+          <p className="my-5 text-zinc-800 dark:text-zinc-200">
+            Explore alguns dos meus projectos. Dê uma olhada no{' '}
+            <Links olink="https://github.com/euotiniel/">GitHub</Links>. outros
+            projecto de código aberto.
+          </p>
+          <div>
+            <ProjectList projectsData={AllProjects} />
+          </div>
+        </div>
+        <div>
+          <h4>Experimentos 🧪</h4>
+          <div>
+            <ProjectList projectsData={Experiments} />
+          </div>
+        </div>
       </div>
     </Layout>
   )

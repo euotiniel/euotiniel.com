@@ -28,18 +28,25 @@ const projects = [
         tech: 'HTML',
     },
     {
-        id: 5,
-        name: 'Confissões',
-        description: 'Demo de um website de confissões ´anônimas´',
-        link: 'https://confessions-amber.vercel.app/',
+        id: 6,
+        name: '120 perguntas front-end',
+        description: 'Designed to provide quick and straightforward answers to questions you may encounter in your day-to-day life as a front-end developer',
+        link: 'https://fe-questions.vercel.app/',
         tech: 'Next.js',
     },
     {
-        id: 6,
+        id: 7,
         name: 'Template',
         description: 'Landing page simulando o site de um lib ou framework',
         link: 'https://notes-react-gamma.vercel.app/',
         tech: 'Next.js',
+    },
+    {
+        id: 8,
+        name: 'Links',
+        description: 'My personal links page',
+        link: 'https://links.euotiniel.com/',
+        tech: 'Astro.js',
     },
 ];
 
