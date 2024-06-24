@@ -1,4 +1,3 @@
-'use client'
 import Layout from '@/components/layout/index'
 import Links from '@/components/links'
 import ProjectList from '@/components/projects'
