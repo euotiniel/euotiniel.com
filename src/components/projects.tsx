@@ -1,4 +1,5 @@
-import Link from 'next/link'
+"use client"
+import { LinkPreview } from "@/components/ui/link-preview";
 
 type ProjectData = {
   id: number
@@ -16,11 +17,9 @@ export default function projects({ projectsData }: ProjectsProps) {
   return (
     <div className="mt-8 flex flex-col gap-4">
       {projectsData.map((proj) => (
-        <Link
-          href={proj.link}
-          target="_blank"
+        <LinkPreview
+          url={proj.link}
           className="border-b pb-2"
-          title={proj.description}
           key={proj.id}
         >
           <div className="flex flex-row items-center justify-between text-zinc-800 dark:text-zinc-200">
@@ -36,7 +35,7 @@ export default function projects({ projectsData }: ProjectsProps) {
               </p>
             </div>
           </div>
-        </Link>
+        </LinkPreview>
       ))}
     </div>
   )
