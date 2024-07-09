@@ -1,0 +1,196 @@
+---
+title: Escrevendo códigos em Shell Script
+description: Uma descrição do meu começo com Shell Script
+date: 2024-07-09
+---
+
+
+Nos últimos meses, me envolvi em várias aventuras de codificação. Além dos projetos paralelos e do trabalho, ainda tinha os compromissos da universidade. Trabalhei simultaneamente com Next.js, Vue.js, C, Java e Shell Script. Talvez eu volte aqui um dia desses para falar mais sobre essa jornada, mas, por enquanto, vamos focar no Shell Script.
+
+Eu já tinha a intenção de estudar Shell Script, mas felizmente a universidade acelerou esse encontro. Meu primeiro contato foi na cadeira de Sistemas Operativos I e, uau, que linguagem! Eu diria que Shell Script é uma linguagem familiar, mas diferente (sei que parece estranho). Parece Python e Java, só que diferente.
+
+<br />
+
+<div className="flex flex-col items-center justify-center">
+<Image
+  src="/images/blog/pc-shell.jpg"
+  alt="Livraria Kiela"
+  width={11400}
+  height={960}
+/>
+</div>
+
+Uma pesquisa rápida no ChatGPT revela que:
+
+_"Shell script é uma linguagem de script projetada para ser interpretada e executada por um shell de sistema operacional, como o Bash. As linguagens de script são usadas principalmente para automatizar a execução de tarefas que, de outra forma, seriam executadas manualmente no terminal."_
+
+Recebemos a missão de criar um sistema para uma clínica fictícia, onde tivemos que criar grupos, adicionar usuários, configurar sistemas de logs, permissões, transferência de arquivos via NFS e muito mais. O desafio foi bem aceito, e meu time e eu demos o nosso melhor. Desde já, gostaria de agradecer a cada um deles, nomeadamente:
+
+<ul className="flex flex-col gap-3 mt-5" style={{ listStyle: 'disc', marginLeft: '20px'}}>
+    <li><a href="https://www.instagram.com/luvumbo.f/" className="border-b transition-all text-gray-500 duration-500 hover:border-gray-500" target="_blank">Francisco Luvumbo</a>;</li>
+    <li><a href="https://www.facebook.com/sabaoth.dicussenga" className="border-b transition-all text-gray-500 duration-500 hover:border-gray-500" target="_blank">Sabaoth Miguel</a>;</li>
+    <li><a href="https://www.instagram.com/fabianagiliane" className="border-b transition-all text-gray-500 duration-500 hover:border-gray-500" target="_blank">Fabiana Giliane</a>;</li>
+    <li><a href="https://www.linkedin.com/in/abelf%C3%A9lix/" className="border-b transition-all text-gray-500 duration-500 hover:border-gray-500" target="_blank">Abel Félix</a>.</li>
+</ul>
+
+Nenhum de nós tinha experiência com a linguagem, o que tornou o desafio ainda mais interessante.
+
+<br />
+
+<div className="flex flex-col items-center justify-center">
+<Image
+  src="/images/blog/group-code.jpg"
+  alt="Livraria Kiela"
+  width={400}
+  height={960}
+/>
+</div>
+
+Voltando ao Shell Script, apesar das suas particularidades, ele ainda compartilha algumas características com outras linguagens, como, por exemplo, estruturas de repetição e estruturas condicionais.
+
+Então, penso poder listar as duas coisas que mais chamaram a minha atenção nessa aventura:
+
+<ul className="flex flex-col gap-3 mt-5" style={{ listStyle: 'disc', marginLeft: '20px'}}>
+    <li>A sintaxe do Shell Script;</li>
+    <li>A execução dos arquivos.</li>
+</ul>
+
+### echo "A sintaxe do Shell Script"
+
+A sintaxe do Shell Script pode parecer um pouco diferente no começo, mas uma vez que você entende os conceitos básicos, fica bem mais fácil. Então, se tiver o seu Linux aberto, crie um arquivo ```.sh``` e vamos lá.
+
+Todo script Bash geralmente começa com uma linha "shebang", que indica ao sistema operacional qual interpretador usar para executar o script.
+
+<br />
+
+```cmd
+
+  #!/bin/bash
+
+```
+
+O comando `echo` é usado para imprimir texto na tela e o ```read``` para ler a entrada do usuário.
+
+<br />
+
+```bash
+
+  #!/bin/bash
+  echo "Qual é o seu nome?"
+  read nome
+  echo "Olá, $nome!"
+
+```
+
+Repare na forma como chamamos a variável usando um ```$```.
+
+Um exemplo realizando soma de dois números seria:
+
+<br />
+
+```bash
+
+  #!/bin/bash
+  a=2
+  b=3
+  soma=$(($a+$b))
+  echo "$soma"
+
+```
+
+A questão do espaçamento também é uma situação delicada no Shell Script, onde um espaço pode influenciar significativamente no desempenho do código. Abaixo, um exemplo de um código aparentemente certo, mas que não terá o resultado esperado por conta dos espaços.
+
+<br />
+
+```bash
+
+  #!/bin/bash
+
+  # Exemplo incorreto
+  # Nesse exemplo teríamos um erro do tipo: 
+  # ./file.sh: line X: [X: command not found
+
+  soma= 7
+
+  if [$soma -eq 7]; then
+	echo "Igual"
+  else
+	echo "Diferente"
+  fi
+
+```
+
+Analise um pouco o código. A solução é bem mais simples do que se pode imaginar: ESPAÇAMENTOS! Adicionamos e removemos os espaçamentos nos lugares corretos e já está.
+
+<br />
+
+```bash
+
+  #!/bin/bash
+
+  soma=7
+
+  if [ $soma -eq 7 ]; then
+	echo "Igual"
+  else
+	echo "Diferente"
+  fi
+
+```
+
+Ainda existe mais coisas interessantes na sintaxe do Shell Script, mas talvez seja melhor descobrir sozinho (risos), então vamos ficar por aqui.
+
+### echo "A execução dos arquivos"
+
+Supondo que você tenha seu arquivo `.sh` com o código bem feito e deseja executá-lo. Na verdade, a execução em si, não tem nada de muito diferente ou incomum. Com o bom e velho Java, por exemplo, você seguiria:
+
+<br />
+
+```cmd
+
+  javac file.java
+
+  // Depois
+
+  java file
+
+```
+
+Já no Shell Script, você precisaria estar no diretório do arquivo e executar:
+
+<br />
+
+```cmd
+
+  ./file.sh
+
+```
+
+Até aqui nada de mais, mas você seria recebido pelo seguinte erro:
+
+<br />
+
+```cmd
+
+  bash: ./file.sh: Permission denied
+
+```
+
+E é aqui onde teremos o pulo do gato, sim, permissões. Você precisaria atribuir permissões aos seus arquivos `.sh` e problema resolvido. Em seu terminal você executaria:
+
+<br />
+
+```bash
+
+  chmod a+x file.sh
+
+```
+
+E já está, depois das permissões, você poderá executar o seu arquivo ```.sh```.
+
+### Conclusão
+
+Shell Script é uma ferramenta poderosa e eficiente para automação de tarefas e administração de sistemas. Embora tenha uma curva de aprendizado inicial, sua simplicidade e eficácia tornam-no indispensável para muitos desenvolvedores e administradores de sistemas.
+
+Minha jornada com Shell Script começou como um desafio universitário, mas acabou se tornando uma habilidade valiosa que continuo a explorar. A experiência de criar um sistema para uma clínica fictícia e colaborar com minha equipe me mostrou o poder e a flexibilidade dessa linguagem. Explorar e experimentar com Shell Script pode abrir muitas portas para simplificar e automatizar tarefas diárias, permitindo que você se concentre em aspectos mais complexos e criativos do desenvolvimento de software. E quem sabe, pode ser o começo de uma nova aventura na sua carreira de programação.
+
