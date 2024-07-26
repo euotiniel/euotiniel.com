@@ -14,7 +14,7 @@ export default function Social() {
       <li data-cursor="block">
         <a
           href="/docs/otoniel-emanuel-cv.pdf"
-          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           download
         >
           <BsFillFileEarmarkPdfFill size="16" />
@@ -24,7 +24,7 @@ export default function Social() {
       <li data-cursor="block">
         <Link
           href="https://github.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
           <BiLogoGithub size="20" />
@@ -34,7 +34,7 @@ export default function Social() {
       <li data-cursor="block">
         <Link
           href="https://www.linkedin.com/in/euotiniel/"
-          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
           <BiLogoLinkedinSquare size="20" />
@@ -44,7 +44,7 @@ export default function Social() {
       <li data-cursor="block">
         <Link
           href="https://x.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
           <BiLogoTwitter size="20" />
@@ -54,7 +54,7 @@ export default function Social() {
       <li data-cursor="block">
         <Link
           href="https://instagram.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-gray-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
           <BiLogoInstagramAlt size="20" />

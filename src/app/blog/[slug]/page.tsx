@@ -79,7 +79,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <time className="text-sm text-zinc-400" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
-        <h2 className="mt-2 scroll-m-20 pb-1 font-bold tracking-tight transition-colors text-3xl">
+        <h2 className="mt-2 scroll-m-20 pb-1 font-bold tracking-tight transition-colors text-2xl">
           {post.title}
         </h2>
       </div>
