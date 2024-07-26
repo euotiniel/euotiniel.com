@@ -34,18 +34,17 @@ export default function page() {
     <Layout>
       <div className='flex flex-col gap-14'>
         <div>
-          <h4>Projectos</h4>
-          <p className="my-5 text-zinc-800 dark:text-zinc-200">
-            Explore alguns dos meus projectos. Dê uma olhada no{' '}
-            <Links olink="https://github.com/euotiniel/">GitHub</Links>. outros
-            projecto de código aberto.
+          <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</p>
+          <p className="text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+            Explore alguns dos meus projectos no{' '}
+            <Links olink="https://github.com/euotiniel/">GitHub</Links>. 
           </p>
           <div>
             <ProjectList projectsData={AllProjects} />
           </div>
         </div>
         <div>
-          <h4>Experimentos 🧪</h4>
+          <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos 🧪</p>
           <div>
             <ProjectList projectsData={Experiments} />
           </div>

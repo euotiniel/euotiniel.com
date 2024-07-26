@@ -21,7 +21,7 @@ const contactFormSchema = z.object({
 type contactFormData = z.infer<typeof contactFormSchema>
 
 export default function Form() {
-  const { toast } = useToast()
+  const { toast } = useToast();
   const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL
   const {
     handleSubmit,
@@ -40,26 +40,26 @@ export default function Form() {
       await axios.post(WEBHOOK_URL, {
         content: `Nome: ${data.nome}\nMensagem: ${data.mensagem}`,
       })
-      // toast({
-      //   title: `Mensagem enviada com sucesso! 🎉`,
-      //   description: `Olá, ${data.nome}. Obrigado pela sua mensagem.`,
-      // })
-      alert(`Olá, ${data.nome}. Obrigado pela sua mensagem.`)
+      toast({
+        title: `Mensagem enviada com sucesso! 🎉`,
+        description: `Olá, ${data.nome}. Obrigado pela sua mensagem.`,
+      })
+      // alert(`Olá, ${data.nome}. Obrigado pela sua mensagem.`)
       reset()
     } catch (error) {
       console.error('Erro ao enviar mensagem.', error)
-      // toast({
-      //   title: 'Erro ao enviar a sua mensagem!',
-      //   description: `Por favor, tente novamente...`,
-      // })
-      alert("Erro ao enviar a sua mensagem! Por favor, tente mais tarde...")
+      toast({
+        title: 'Erro ao enviar a sua mensagem!',
+        description: `Por favor, tente novamente...`,
+      })
+      // alert("Erro ao enviar a sua mensagem! Por favor, tente mais tarde...")
     } finally {
       setSubmitting(false)
     }
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <div className="flex flex-col gap-5">
+      <div className="mb-5 flex flex-col gap-5">
         <Label htmlFor="nome">Nome:</Label>
 
         <Input
@@ -86,7 +86,7 @@ export default function Form() {
       </div>
 
       <Button
-        className="w-full"
+        className="w-full dark:bg-neutral-300"
         type="submit"
         disabled={isSubmitting}
         data-cursor="block"

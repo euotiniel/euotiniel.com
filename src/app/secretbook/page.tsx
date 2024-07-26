@@ -28,9 +28,10 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Layout>
-      <h4>Secretbook</h4>
-      <p className='my-5 text-zinc-800 dark:text-zinc-200'>
-        {' '}
+      <p className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
+        Secretbook
+      </p>
+      <p className="mb-8 text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
         Aqui você pode deixar mensagens, pensamentos e feedback. Divirta-se!
       </p>
       <Form />

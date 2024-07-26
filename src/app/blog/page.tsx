@@ -36,8 +36,8 @@ export default function Blog() {
 
   return (
     <Layout>
-      <h4>Blog</h4>
-      <p className='my-5 text-zinc-800 dark:text-zinc-200'>
+      <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Blog</p>
+      <p className='text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
       “Devs e as Barreiras na Criação de um Portfólio” ganhou um react (não js) no
         canal do Lucas Montano. Leia o{' '}
         <Links olink="https://euotiniel.com/blog/portfolios">artigo</Links> e
