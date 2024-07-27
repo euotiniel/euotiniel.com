@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster"
 const meta = {
   title: 'Otoniel Emanuel',
   description:
-    'I want to put a ding in the universe ▲',
+    'front-end developer & ui designer',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,
 }
 
@@ -18,6 +18,25 @@ export const metadata: Metadata = {
     default: meta.title,
     template: '%s | Otoniel Emanuel',
   },
+  keywords: [
+    "Otoniel Emanuel",
+    "Otoniel",
+    "Emanuel",
+    "euotiniel.com",
+    "UI Design",
+    "Front-end Developer",
+    "Frontend",
+    "Developer",
+    "Software",
+    "Design",
+    "Angola",
+    "Luanda",
+    "Vercel",
+    "Next.js",
+    "TailwindCSS",
+    "Blog",
+    "Open source",
+  ],
   description: meta.description,
   openGraph: {
     title: meta.title,
@@ -26,17 +45,14 @@ export const metadata: Metadata = {
     siteName: meta.title,
     locale: 'en-US',
     type: 'website',
-    images: [
-      {
-        url: meta.image,
-      },
-    ],
+      
   },
   twitter: {
     title: meta.title,
     description: meta.description,
     images: meta.image,
     card: 'summary_large_image',
+    creator: "Otoniel Emanuel",
   },
   alternates: {
     canonical: WEBSITE_HOST_URL,
