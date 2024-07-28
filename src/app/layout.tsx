@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import './global.css'
 import { GeistSans } from 'geist/font/sans';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from "@/components/ui/toaster"
 
 const meta = {
@@ -70,6 +71,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
           <Toaster />
+          <Analytics />
           <SpeedInsights />
         </ThemeProvider>
       </body>
