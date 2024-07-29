@@ -38,7 +38,7 @@ export default function Blog() {
     <Layout>
       <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Blog</p>
       <p className='text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
-      “Devs e as Barreiras na Criação de um Portfólio” ganhou um react (não js) no
+      Meu artigo ganhou um react (não js) no
         canal do Lucas Montano. Leia o{' '}
         <Links olink="https://euotiniel.com/blog/portfolios">artigo</Links> e
         assista ao{' '}
@@ -46,7 +46,7 @@ export default function Blog() {
           vídeo
         </Links>
         . 
-        Você também pode encontrar alguns trabalhos como redator de texto na{' '}
+        Você também pode encontrar outros artigos na{' '}
         <Links olink="https://blog.aosc.social/">aosc</Links> e{' '}
         <Links olink="https://web.facebook.com/artigosemanal">
           Artigo Semanal

@@ -10,9 +10,8 @@ export default function page() {
       </p>
       <div className="text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
         <p>
-          Desenvolvedor front-end, entusiasta de código aberto e escritor.
-          Actualmente, estou cursando Engenharia Informática em Luanda, e dedico
-          boa parte do meu tempo à minha paixão pela programação.
+          Desenvolvedor front-end na INOKRI, entusiasta de código aberto e escritor. 
+          
         </p>
         <p>
           Pensei em criar uma sessão para postar algumas fotos e detalhar alguns

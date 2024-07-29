@@ -34,20 +34,7 @@ const projects = [
         link: 'https://fe-questions.vercel.app/',
         tech: 'Next.js',
     },
-    {
-        id: 7,
-        name: 'Template',
-        description: 'Landing page simulando o site de um lib ou framework',
-        link: 'https://notes-react-gamma.vercel.app/',
-        tech: 'Next.js',
-    },
-    {
-        id: 8,
-        name: 'Links',
-        description: 'My personal links page',
-        link: 'https://links.euotiniel.com/',
-        tech: 'Astro.js',
-    },
+    
 ];
 
 export default projects;

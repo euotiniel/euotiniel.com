@@ -48,13 +48,6 @@ export const metadata: Metadata = {
     type: 'website',
       
   },
-  twitter: {
-    title: meta.title,
-    description: meta.description,
-    images: meta.image,
-    card: 'summary_large_image',
-    creator: "Otoniel Emanuel",
-  },
   alternates: {
     canonical: WEBSITE_HOST_URL,
   },

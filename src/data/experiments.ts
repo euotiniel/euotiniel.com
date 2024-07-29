@@ -20,6 +20,13 @@ const experiments = [
         link: 'https://github.com/euotiniel/euotiniel-teste-lib',
         tech: 'TypeScript',
     },
+    {
+        id: 4,
+        name: 'Template',
+        description: 'Landing page simulando o site de um lib ou framework',
+        link: 'https://notes-react-gamma.vercel.app/',
+        tech: 'Next.js',
+    },
 ];
 
 export default experiments;

@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="flex flex-col items-center justify-between sm:flex-row">
       <div className="flex gap-2 items-center my-5">
-        <Avatar className="h-9 w-9">
+        <Avatar className="h-10 w-10">
           <AvatarImage
             src="https://github.com/euotiniel.png"
             alt="Logotipo Otoniel Emanuel"
@@ -37,10 +37,10 @@ export default function Header() {
           </li>
           <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/secretbook" className="p-1">
-              secretbook
+              secret
             </Link>
           </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 6px">
+          <li data-cursor="block">
             <ModeToggle />
           </li>
         </ul>

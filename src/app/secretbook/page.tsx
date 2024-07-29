@@ -4,7 +4,7 @@ import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 
 const meta = {
-  title: 'Secretbook',
+  title: 'Secret',
   description: 'Olá, daqui fala o Otoniel. Deixe mensagem...',
   url: `${WEBSITE_HOST_URL}/about`,
 }
@@ -29,7 +29,7 @@ export default function page() {
   return (
     <Layout>
       <p className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
-        Secretbook
+        Secret
       </p>
       <p className="mb-8 text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
         Aqui você pode deixar mensagens, pensamentos e feedback. Divirta-se!

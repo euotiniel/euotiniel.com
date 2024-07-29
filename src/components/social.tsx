@@ -17,8 +17,8 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           download
         >
-          <BsFillFileEarmarkPdfFill size="16" />
-          <span className="ml-1">resume</span>
+          <BsFillFileEarmarkPdfFill size="14.6" />
+          <span className="ml-1 text-[14.5px]">resume</span>
         </a>
       </li>
       <li data-cursor="block">
@@ -27,8 +27,8 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoGithub size="20" />
-          <span className="ml-1">github</span>
+          <BiLogoGithub size="14.6" />
+          <span className="ml-1 text-[14.5px]">github</span>
         </Link>
       </li>
       <li data-cursor="block">
@@ -37,8 +37,8 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoLinkedinSquare size="20" />
-          <span className="ml-1">linkedin</span>
+          <BiLogoLinkedinSquare size="14.6" />
+          <span className="ml-1 text-[14.5px]">linkedin</span>
         </Link>
       </li>
       <li data-cursor="block">
@@ -47,8 +47,8 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoTwitter size="20" />
-          <span className="ml-1">twitter</span>
+          <BiLogoTwitter size="14.6" />
+          <span className="ml-1 text-[14.5px]">twitter</span>
         </Link>
       </li>
       <li data-cursor="block">
@@ -57,8 +57,8 @@ export default function Social() {
           className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoInstagramAlt size="20" />
-          <span className="ml-1">instagram</span>
+          <BiLogoInstagramAlt size="14.6" />
+          <span className="ml-1 text-[14.5px]">instagram</span>
         </Link>
       </li>
     </ul>

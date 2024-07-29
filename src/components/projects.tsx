@@ -21,6 +21,7 @@ export default function projects({ projectsData }: ProjectsProps) {
           url={proj.link}
           className="border-b pb-2"
           key={proj.id}
+          target="_blank"
         >
           <div className="flex flex-row items-center justify-between text-zinc-800 dark:text-zinc-200">
             <div className="flex flex-col">
