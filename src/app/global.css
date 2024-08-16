@@ -150,6 +150,7 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  border-radius: 10px;
 }
 
 /* Remove Safari input shadow on mobile */
