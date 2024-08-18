@@ -10,7 +10,13 @@ export default function Footer() {
   const [timeUnit, setTimeUnit] = useState('');
 
   useEffect(() => {
-    const startTime = new Date().getTime();
+    const storedStartTime = sessionStorage.getItem('startTime');
+    const currentTime = new Date().getTime();
+
+    const startTime = storedStartTime ? parseInt(storedStartTime, 10) : currentTime;
+    if (!storedStartTime) {
+      sessionStorage.setItem('startTime', currentTime.toString());
+    }
 
     const updateTime = () => {
       const elapsedTime = calculateTimeElapsed(startTime);
@@ -39,19 +45,19 @@ export default function Footer() {
         </small>
       </div>
       <div className="mt-4 flex items-center text-center">
-        <div className="mr-2 h-2 w-2 rounded-full bg-green-200 dark:bg-green-800"></div>
+      <div className="mr-2 h-2 w-2 rounded-full bg-green-300 dark:bg-green-800 animate-pulse"></div>
         <div>
-        <motion.p className="text-[13.5px]">
-          Está ligado há{' '}
-          <motion.span
-            key={timeElapsed}
-            initial={{ opacity: 0, filter: 'blur(4px)' }}
-            animate={{ opacity: 1, filter: 'blur(0px)' }}
-            transition={{ duration: 0.4 }}
-          >
-            {timeElapsed}
-          </motion.span>
-        </motion.p>
+          <motion.p className="text-[13.5px]">
+            Está ligado há{' '}
+            <motion.span
+              key={timeElapsed}
+              initial={{ opacity: 0, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.4 }}
+            >
+              {timeElapsed}
+            </motion.span>
+          </motion.p>
         </div>
       </div>
     </footer>

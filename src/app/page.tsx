@@ -10,24 +10,24 @@ export default function page() {
       <h1 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300">
         Otoniel Emanuel
       </h1>
-      <div className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-        <p>
+      <div className='mt-6'>
+        <p className='text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
           Desenvolvedor front-end na INOKRI, entusiasta de código aberto e
           escritor. Nos meus tempos livres gosto de fotografar, ler, ver animes
           e criar &apos;coisas bonitas&apos;.
         </p>
-        <p>
+        <p className='text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
           Pensei em criar uma sessão para postar algumas fotos e detalhar alguns
           eventos em que participo, mas o{' '}
           <Links olink="https://read.cv/euotiniel">Read.cv</Links> salvou-me
           disso (por agora).
         </p>
         <Works />
-        <p>
+        <p className='text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
           Tenho me divertido criando alguns componentes animados.
         </p>
         <Craft />
-        <p>
+        <p className='text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
           Sinta-se convidado para interagir comigo nas minhas redes sociais. É
           sempre bom conhecer pessoas novas e compartilhar experiências!
         </p>
