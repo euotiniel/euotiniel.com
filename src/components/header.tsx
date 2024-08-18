@@ -6,7 +6,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
-    <header className="flex flex-col items-center justify-between sm:flex-row">
+    <header className="flex items-center justify-between flex-row">
       <div className="flex gap-2 items-center my-5 ml-1">
         <Avatar className="h-9 w-9">
           <AvatarImage

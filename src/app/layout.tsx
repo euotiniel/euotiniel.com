@@ -60,9 +60,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt" className={GeistSans.className}>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+    <html lang="pt">
+      <body className={GeistSans.className}>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <BlurTop />
           {children}
           <Toaster />

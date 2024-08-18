@@ -65,7 +65,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-    <div className='container mt-12 px-5 md:px-20 lg:px-56 xl:px-80 flex flex-col gap-3'>
+    <div className='container mt-12 px-5 max-w-[650px] flex flex-col gap-3'>
       <div className="flex w-full flex-row items-center justify-between">
         <Link
           href="/blog/"
