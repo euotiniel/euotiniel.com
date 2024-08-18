@@ -34,9 +34,9 @@ export default function page() {
     <Layout>
       <div className='flex flex-col gap-14'>
         <div>
-          <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</p>
-          <p className="text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-            Explore alguns dos meus projectos no{' '}
+          <h1 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</h1>
+          <p className="text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+           Descubra outros projectos no meu{' '}
             <Links olink="https://github.com/euotiniel/">GitHub</Links>. 
           </p>
           <div>
@@ -44,7 +44,7 @@ export default function page() {
           </div>
         </div>
         <div>
-          <p className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos 🧪</p>
+          <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos 🧪</h2>
           <div>
             <ProjectList projectsData={Experiments} />
           </div>

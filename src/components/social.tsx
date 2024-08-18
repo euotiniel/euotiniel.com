@@ -14,50 +14,50 @@ export default function Social() {
       <li data-cursor="block">
         <a
           href="/docs/otoniel-emanuel-cv.pdf"
-          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-px hover:border-gray-500"
           download
         >
-          <BsFillFileEarmarkPdfFill size="14.6" />
-          <span className="ml-1 text-[14.5px]">resume</span>
+          <BsFillFileEarmarkPdfFill size="14" />
+          <span className="ml-1 text-[14.5px]">cv</span>
         </a>
       </li>
       <li data-cursor="block">
         <Link
           href="https://github.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-px hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoGithub size="14.6" />
+          <BiLogoGithub size="16" />
           <span className="ml-1 text-[14.5px]">github</span>
         </Link>
       </li>
       <li data-cursor="block">
         <Link
           href="https://www.linkedin.com/in/euotiniel/"
-          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-px hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoLinkedinSquare size="14.6" />
+          <BiLogoLinkedinSquare size="16" />
           <span className="ml-1 text-[14.5px]">linkedin</span>
         </Link>
       </li>
       <li data-cursor="block">
         <Link
           href="https://x.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-px hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoTwitter size="14.6" />
+          <BiLogoTwitter size="16" />
           <span className="ml-1 text-[14.5px]">twitter</span>
         </Link>
       </li>
       <li data-cursor="block">
         <Link
           href="https://instagram.com/euotiniel"
-          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-[2px] hover:border-gray-500"
+          className="flex items-center gap-1 border-b transition-all text-neutral-500 duration-500 px-[5px] py-px hover:border-gray-500"
           target="_blank"
         >
-          <BiLogoInstagramAlt size="14.6" />
+          <BiLogoInstagramAlt size="16" />
           <span className="ml-1 text-[14.5px]">instagram</span>
         </Link>
       </li>
