@@ -2,7 +2,6 @@ import { ThemeProvider } from '@/app/providers'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import './global.css'
-import { GeistSans } from 'geist/font/sans';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from "@/components/ui/toaster"
@@ -60,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt" className={GeistSans.className}>
+    <html lang="pt" >
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <BlurTop />
