@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={GeistSans.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <BlurTop />
           {children}
           <Toaster />
