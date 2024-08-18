@@ -7,7 +7,7 @@ type LayoutProp = {
 
 export default function Index({ children }: LayoutProp) {
   return (
-    <div className="container mt-12 px-5 md:px-44 lg:px-72 xl:px-[370px]">
+    <div className="container max-w-[585px] mt-12 px-4">
       <Header />
       <main className="pt-10">{children}</main>
       <Footer />
