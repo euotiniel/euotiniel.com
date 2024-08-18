@@ -1,21 +1,33 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from "@/components/links";
 import { calculateTimeElapsed } from '@/lib/timeUtils';
 
 export default function Footer() {
   const [timeElapsed, setTimeElapsed] = useState('');
+  const [timeUnit, setTimeUnit] = useState('');
 
   useEffect(() => {
     const startTime = new Date().getTime();
 
-    const interval = setInterval(() => {
-      setTimeElapsed(calculateTimeElapsed(startTime));
-    }, 1000);
+    const updateTime = () => {
+      const elapsedTime = calculateTimeElapsed(startTime);
+      const newTimeUnit = getTimeUnit(elapsedTime);
+      setTimeElapsed(elapsedTime);
+      setTimeUnit(newTimeUnit);
+    };
+
+    const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
   }, []);
+
+  const getTimeUnit = (elapsedTime) => {
+    const [unit] = elapsedTime.split(' ');
+    return unit;
+  };
 
   return (
     <footer className="flex flex-col md:flex-row items-center justify-between my-8 md:my-14 text-neutral-600 dark:text-neutral-400">
@@ -26,10 +38,21 @@ export default function Footer() {
           on <Link olink="https://vercel.com/"> ▲ </Link>{" "}
         </small>
       </div>
-      <div className="mt-4 text-center">
-        <p className="text-[13.5px]">
-          Está ligado há {timeElapsed}
-        </p>
+      <div className="mt-4 flex items-center text-center">
+        <div className="mr-2 h-2 w-2 rounded-full bg-green-200 dark:bg-green-800"></div>
+        <div>
+        <motion.p className="text-[13.5px]">
+          Está ligado há{' '}
+          <motion.span
+            key={timeElapsed}
+            initial={{ opacity: 0, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 0.4 }}
+          >
+            {timeElapsed}
+          </motion.span>
+        </motion.p>
+        </div>
       </div>
     </footer>
   );
