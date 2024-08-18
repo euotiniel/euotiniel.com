@@ -25,7 +25,7 @@ export default function projects({ projectsData }: ProjectsProps) {
         >
           <div className="flex flex-row items-center justify-between text-zinc-800 dark:text-zinc-200">
             <div className="flex flex-col">
-              <p className="scroll-m-20 text-[15px] font-semibold leading-7 text-neutral-700 dark:text-neutral-300 tracking-tight">
+              <p className="scroll-m-20 text-[14.9px] font-semibold leading-7 text-neutral-700 dark:text-neutral-300 tracking-tight">
                 {proj.name}
               </p>
             </div>

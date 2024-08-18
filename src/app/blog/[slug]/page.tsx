@@ -8,6 +8,7 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { BsArrowBarLeft } from 'react-icons/bs'
+import BlurTop from "@/components/blur-top"
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -76,10 +77,10 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <div></div>
       </div>
       <div className="mt-10 flex flex-col">
-        <time className="text-sm text-zinc-400" dateTime={post.date}>
+        <time className="text-sm text-neutral-400" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
-        <h2 className="mt-2 scroll-m-20 pb-1 font-bold tracking-tight transition-colors text-2xl">
+        <h2 className="mt-2 scroll-m-20 pb-1 font-bold tracking-tight transition-colors text-xl">
           {post.title}
         </h2>
       </div>

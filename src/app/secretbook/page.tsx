@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Layout>
-      <p className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
+      <h1 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
         Secret
-      </p>
-      <p className="mb-8 text-[15.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+      </h1>
+      <p className="mb-8 text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
         Aqui você pode deixar mensagens, pensamentos e feedback. Divirta-se!
       </p>
       <Form />

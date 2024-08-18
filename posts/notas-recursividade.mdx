@@ -11,10 +11,10 @@ Sim, é possível criar um loop que "substitua" as funções iterativas usando a
 Com isso em mente, gostaria de destacar quatro pontos fundamentais sobre funções recursivas:
 
 <ul className="flex flex-col gap-3 mt-5" style={{ listStyle: 'disc', marginLeft: '20px'}}>
-    <li className="list-disc">Toda função recursiva deve possuir uma condição de paragem;</li>
-    <li className="list-disc">O valor inicial da iteração deve ser incializado fora da função;</li>
-    <li className="list-disc">A função recursiva deve realizar um processo de incremento ou decremento para se aproximar da condição de paragem;</li>
-    <li className="list-disc">A função deve fazer chamadas sucessivas de si mesma.</li>
+    <li className="list-disc text-[14.9px]">Toda função recursiva deve possuir uma condição de paragem;</li>
+    <li className="list-disc text-[14.9px]">O valor inicial da iteração deve ser incializado fora da função;</li>
+    <li className="list-disc text-[14.9px]">A função recursiva deve realizar um processo de incremento ou decremento para se aproximar da condição de paragem;</li>
+    <li className="list-disc text-[14.9px]">A função deve fazer chamadas sucessivas de si mesma.</li>
 </ul>
 
 Embora existam outros aspectos a serem considerados, neste artigo focaremos exclusivamente nesses quatro princípios.
@@ -57,10 +57,10 @@ Agora observe a mesma função de forma recursiva.
 A diferença é notória. O número de linha na função recursiva foi uma provocação da minha parte, mas repare que respeitamos as 4 notas propostas no princípio.
 
 <ul className="flex flex-col gap-3 mt-5" style={{ listStyle: 'disc', marginLeft: '20px'}}>
-    <li className="list-disc">A condição de paragem ocorre quando n é igual a 0 ou 1, onde a função retorna imediatamente 1;</li>
-    <li className="list-disc">O valor inicial da iteração é qualquer número inteiro n passado como parametro para a função fat;</li>
-    <li className="list-disc">Repare que a cada nova chamada temos n - 1, ou seja, é retirado um valor a cada nova chamada da função;</li>
-    <li className="list-disc"> A chamada sucessiva ocorre dentro da própria função fat, onde ela se chama recursivamente com n - 1 até que a condição de paragem seja atendida..</li>
+    <li className="list-disc text-[14.9px]">A condição de paragem ocorre quando n é igual a 0 ou 1, onde a função retorna imediatamente 1;</li>
+    <li className="list-disc text-[14.9px]">O valor inicial da iteração é qualquer número inteiro n passado como parametro para a função fat;</li>
+    <li className="list-disc text-[14.9px]">Repare que a cada nova chamada temos n - 1, ou seja, é retirado um valor a cada nova chamada da função;</li>
+    <li className="list-disc text-[14.9px]"> A chamada sucessiva ocorre dentro da própria função fat, onde ela se chama recursivamente com n - 1 até que a condição de paragem seja atendida..</li>
 </ul>
 
 Você pode estar se preguntando: Mas por quê usar funções recursivas se as iterativas funcionam?
@@ -72,10 +72,10 @@ Não necessariamente existem problemas que só podem ser resolvidos com recursiv
 Alguns casos em que a recursão é mais recomendada:
 
 <ul className="flex flex-col gap-3 mt-5" style={{ listStyle: 'disc', marginLeft: '20px'}}>
-<li className="list-disc">**Travessia de estruturas de dados recursivas**: Estruturas de dados como árvores e listas ligadas podem ser eficientemente percorridas usando recursão. Por exemplo, a travessia de uma árvore binária ou uma lista ligada pode ser feita de forma recursiva.</li>
-<li className="list-disc">**Problemas dividir e conquistar**: Algoritmos baseados na técnica de dividir e conquistar, como mergesort, quicksort e busca binária, muitas vezes são mais facilmente implementados de forma recursiva.</li>
-<li className="list-disc">**Problemas de pombinação e permutação**: Problemas que envolvem combinações e permutações de elementos, como gerar todas as combinações de um conjunto de elementos, são naturalmente tratados de forma recursiva.</li>
-<li className="list-disc">**Problemas de Grafos**: Algoritmos para a busca em profundidade (DFS) e a busca em largura (BFS) em grafos são comumente implementados de forma recursiva</li>
+<li className="list-disc text-[14.9px]">**Travessia de estruturas de dados recursivas**: Estruturas de dados como árvores e listas ligadas podem ser eficientemente percorridas usando recursão. Por exemplo, a travessia de uma árvore binária ou uma lista ligada pode ser feita de forma recursiva.</li>
+<li className="list-disc text-[14.9px]">**Problemas dividir e conquistar**: Algoritmos baseados na técnica de dividir e conquistar, como mergesort, quicksort e busca binária, muitas vezes são mais facilmente implementados de forma recursiva.</li>
+<li className="list-disc text-[14.9px]">**Problemas de pombinação e permutação**: Problemas que envolvem combinações e permutações de elementos, como gerar todas as combinações de um conjunto de elementos, são naturalmente tratados de forma recursiva.</li>
+<li className="list-disc text-[14.9px]">**Problemas de Grafos**: Algoritmos para a busca em profundidade (DFS) e a busca em largura (BFS) em grafos são comumente implementados de forma recursiva</li>
 </ul>
 
 Esses são apenas alguns dos vários casos em que a recursividade é amplamente recomendável. 
