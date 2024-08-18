@@ -8,7 +8,7 @@ const experiences = [
     {
       company: 'Kudika',
       logo: '/images/works/kudika.png',
-      role: 'Front-end Developer & ui designer',
+      role: 'Developer & UI designer',
       period: '2022 - 2023',
     },
   ];
