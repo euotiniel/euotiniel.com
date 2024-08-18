@@ -10,7 +10,7 @@ export default function page() {
       <h1 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300">
         Otoniel Emanuel
       </h1>
-      <div className="text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+      <div className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
         <p>
           Desenvolvedor front-end na INOKRI, entusiasta de código aberto e
           escritor. Nos meus tempos livres gosto de fotografar, ler, ver animes
