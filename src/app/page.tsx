@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/index'
+import Craft from "@/components/last-craft"
 import Works from '@/components/work'
 import Links from '@/components/links'
 import Social from '@/components/social'
@@ -22,6 +23,10 @@ export default function page() {
           disso (por agora).
         </p>
         <Works />
+        <p>
+          Tenho me divertido criando alguns componentes animados.
+        </p>
+        <Craft />
         <p>
           Sinta-se convidado para interagir comigo nas minhas redes sociais. É
           sempre bom conhecer pessoas novas e compartilhar experiências!
