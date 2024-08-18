@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { AnimatePresence, MotionConfig, delay, motion } from 'framer-motion'
+import { MotionConfig, motion } from 'framer-motion'
 import classNames from 'classnames'
 
 export default function LastCraft() {
@@ -35,10 +35,13 @@ export default function LastCraft() {
       isSubmited,
   })
 
-  const inputClass = classNames('p-1 text-xs rounded-md focus:outline-none w-[170px] ', {
-    hidden: isSubmited,
-    block: !isSubmited,
-  })
+  const inputClass = classNames(
+    'p-1 text-xs rounded-md focus:outline-none w-[170px]',
+    {
+      hidden: isSubmited,
+      block: !isSubmited,
+    },
+  )
 
   const textAreaClass = classNames(
     'p-1 w-full h-28 text-xs rounded-md focus:outline-none mt-0.5',
@@ -55,7 +58,7 @@ export default function LastCraft() {
   }
 
   return (
-    <div className="flex h-64 flex-col items-center justify-center p-5 bg-neutral-100 dark:bg-neutral-900 rounded-lg mt-6">
+    <div className="mt-6 flex h-64 flex-col items-center justify-center rounded-lg bg-neutral-50 p-5 dark:bg-neutral-900/50">
       <MotionConfig transition={TRANSITION}>
         <motion.div
           layout
@@ -91,7 +94,7 @@ export default function LastCraft() {
             <motion.div layout>
               <button
                 type="submit"
-                className="rounded-md bg-gradient-to-t from-blue-500 to-blue-400 dark:from-blue-600 dark:to-blue-700 px-5 py-1 text-xs text-neutral-50 duration-700"
+                className="rounded-md bg-gradient-to-t from-gray-500 to-gray-400 px-5 py-1 text-xs text-neutral-50 duration-700 dark:from-gray-600 dark:to-gray-700"
               >
                 Submit
               </button>

@@ -15,13 +15,13 @@ export default function Work() {
               <Image
                 src={experience.logo}
                 alt={`${experience.company} logo`}
-                width={30}
-                height={30}
+                width={28}
+                height={28}
                 className="h-auto w-full filter grayscale dark:invert select-none"
               />
             </div>
             <div className="flex w-full flex-col">
-              <span className="text-[13.5px] font-semibold leading-none text-neutral-600 dark:text-neutral-300">
+              <span className="text-[13px] font-semibold leading-none text-neutral-600 dark:text-neutral-300">
                 {experience.company}
               </span>
               <div className="flex items-center justify-between pt-1">

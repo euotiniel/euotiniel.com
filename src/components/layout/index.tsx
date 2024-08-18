@@ -1,8 +1,8 @@
-import Header from '../header'
-import Footer from '../footer'
+import Header from '../header';
+import Footer from '../footer';
 
 type LayoutProp = {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function Index({ children }: LayoutProp) {
@@ -12,5 +12,6 @@ export default function Index({ children }: LayoutProp) {
       <main className="pt-10">{children}</main>
       <Footer />
     </div>
-  )
+  );
 }
+

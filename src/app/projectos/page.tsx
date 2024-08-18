@@ -35,7 +35,7 @@ export default function page() {
       <div className='flex flex-col gap-14'>
         <div>
           <h1 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</h1>
-          <p className="text-[14.9px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+          <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
            Descubra outros projectos no meu{' '}
             <Links olink="https://github.com/euotiniel/">GitHub</Links>. 
           </p>
