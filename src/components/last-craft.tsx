@@ -44,7 +44,7 @@ export default function LastCraft() {
   )
 
   const textAreaClass = classNames(
-    'p-1 w-full h-28 text-xs rounded-md focus:outline-none mt-0.5',
+    'p-1 w-full h-24 text-xs rounded-lg resize-none focus:outline-none mt-0.5',
     {
       hidden: !isSubmited,
       block: isSubmited,
