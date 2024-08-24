@@ -7,7 +7,7 @@ type LinkProps = {
     return (
       <a
         href={olink}
-        className="transition-all border-b text-neutral-500 duration-500 hover:border-gray-400"
+        className="transition-all border-b text-neutral-500 duration-500 hover:border-gray-300"
         target="_blank"
         data-cursor="block"
       >
