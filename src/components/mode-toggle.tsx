@@ -21,6 +21,8 @@ export function ModeToggle() {
         <Button
           variant="link"
           size="sm"
+          name="Theme"
+          id="theme"
           className="border-none outline-none hover:bg-none focus-visible:outline-none"
         >
           <SunIcon className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
