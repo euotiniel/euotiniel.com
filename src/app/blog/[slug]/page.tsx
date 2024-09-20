@@ -8,7 +8,6 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { BsArrowBarLeft } from 'react-icons/bs'
-import BlurTop from "@/components/blur-top"
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -65,29 +64,29 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-    <div className='container mt-12 px-5 max-w-[650px] flex flex-col gap-3'>
-      <div className="flex w-full flex-row items-center justify-between">
-        <Link
-          href="/blog/"
-          className="mt-5 flex flex-row items-center gap-2 leading-6 tracking-normal text-muted-foreground"
-        >
-          <BsArrowBarLeft size={13} />
-          <span className="text-[13px]">voltar</span>
-        </Link>
-        <div></div>
+      <div className="container mt-12 flex max-w-[580px] flex-col gap-3 px-5">
+        <div className="flex w-full flex-row items-center justify-between">
+          <Link
+            href="/blog/"
+            className="mt-5 flex flex-row items-center gap-2 leading-6 tracking-normal text-muted-foreground"
+          >
+            <BsArrowBarLeft size={13} />
+            <span className="text-[13px]">voltar</span>
+          </Link>
+          <div></div>
+        </div>
+        <div className="mt-10 flex flex-col">
+          <time className="text-sm text-neutral-400" dateTime={post.date}>
+            {format(parseISO(post.date), 'LLLL d, yyyy')}
+          </time>
+          <h2 className="mt-2 scroll-m-20 pb-1 text-xl font-bold tracking-tight transition-colors">
+            {post.title}
+          </h2>
+        </div>
+        <article className="mb-28 mt-14 w-full text-zinc-800 dark:prose-invert dark:text-zinc-200">
+          <MDXContent components={mdxComponents} />
+        </article>
       </div>
-      <div className="mt-10 flex flex-col">
-        <time className="text-sm text-neutral-400" dateTime={post.date}>
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </time>
-        <h2 className="mt-2 scroll-m-20 pb-1 font-bold tracking-tight transition-colors text-xl">
-          {post.title}
-        </h2>
-      </div>
-      <article className="mb-28 mt-14 w-full dark:prose-invert text-zinc-800 dark:text-zinc-200">
-        <MDXContent components={mdxComponents} />
-      </article>
-    </div>
   )
 }
 

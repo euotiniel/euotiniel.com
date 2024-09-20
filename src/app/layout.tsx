@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from "@/components/ui/toaster"
 import BlurTop from "@/components/blur-top"
+import BlurBottom from '@/components/blur-bottom'
 
 const meta = {
   title: 'Otoniel Emanuel',
@@ -65,6 +66,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <BlurTop />
           {children}
+          <BlurBottom />
           <Toaster />
           <Analytics />
           <SpeedInsights />

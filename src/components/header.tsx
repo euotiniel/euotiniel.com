@@ -7,7 +7,7 @@ import { ModeToggle } from "./mode-toggle";
 export default function Header() {
   return (
     <header className="flex items-center justify-between flex-row">
-      <div className="flex gap-2 items-center my-5 ml-1">
+      <Link href="/" className="flex gap-2 items-center my-5 ml-1">
         <Avatar className="h-9 w-9">
           <AvatarImage
             src="https://github.com/euotiniel.png"
@@ -16,18 +16,13 @@ export default function Header() {
           />
           <AvatarFallback>OE</AvatarFallback>
         </Avatar>
-      </div>
+      </Link>
 
       <nav>
         <ul className="flex flex-row items-center gap-2 text-sm sm:text-[13.9px] text-neutral-700 dark:text-neutral-300">
           <li data-cursor="block" data-cursor-style="border-radius: 6px">
-            <Link href="/" className="p-1">
-              home
-            </Link>
-          </li>
-          <li data-cursor="block" data-cursor-style="border-radius: 6px">
             <Link href="/projectos" className="p-1">
-              proj
+              projectos
             </Link>
           </li>
           <li data-cursor="block" data-cursor-style="border-radius: 6px">
