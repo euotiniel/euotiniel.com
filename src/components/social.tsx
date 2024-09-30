@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import socialLinks from "@/data/social"
+import socialLinks from "@/data/social-low"
 
 export default function Social() {
   return (
