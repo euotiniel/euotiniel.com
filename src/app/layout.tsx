@@ -19,12 +19,13 @@ const meta = {
 export const metadata: Metadata = {
   title: {
     default: meta.title,
-    template: '%s | Otoniel Emanuel',
+    template: '%s - euotiniel',
   },
   keywords: [
     "Otoniel Emanuel",
     "Otoniel",
     "Emanuel",
+    "euotiniel",
     "euotiniel.com",
     "UI Design",
     "Front-end Developer",
