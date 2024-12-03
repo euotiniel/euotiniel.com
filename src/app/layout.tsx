@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "euotiniel",
     "euotiniel.com",
     "UI Design",
+    "Design Engineer",
     "Front-end Developer",
     "Frontend",
     "Developer",
