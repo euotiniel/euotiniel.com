@@ -39,16 +39,15 @@ export default function Footer() {
     <footer className="flex flex-col md:flex-row items-center justify-between my-8 md:my-14 text-neutral-600 dark:text-neutral-400">
       <div className="mt-9 sm:mb-3">
         <small className="text-[13.5px] font-normal leading-none">
-          2024 &copy;{" "}
-          <Link olink="https://twitter.com/euotiniel">euotiniel</Link> . Hosted
-          on <Link olink="https://vercel.com/"> ▲ </Link>{" "}
+          2025 &copy;{" "}
+          <Link olink="https://twitter.com/euotiniel">euotiniel</Link>
         </small>
       </div>
       <div className="mt-4 flex items-center text-center">
       <div className="mr-2 h-2 w-2 rounded-full bg-green-300 dark:bg-green-800 animate-pulse"></div>
         <div>
           <motion.p className="text-[13.5px]">
-            Está ligado há{' '}
+            há{' '}
             <motion.span
               key={timeElapsed}
               initial={{ opacity: 0, filter: 'blur(4px)' }}
