@@ -85,14 +85,14 @@ export default function Form() {
         )}
       </div>
 
-      <Button
-        className="w-full dark:bg-neutral-300"
+      <button
+        className="w-full text-sm font-semibold bg-gradient-to-tr from-neutral-700 to-neutral-600 text-neutral-100 py-2 rounded-lg select-none"
         type="submit"
         disabled={isSubmitting}
         data-cursor="block"
       >
         {submitting ? 'A enviar...' : 'Enviar'}
-      </Button>
+      </button>
     </form>
   )
 }

@@ -16,8 +16,7 @@ export default function page() {
       <div className="mt-6">
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
           Combino codificação e design para criar produtos inesquecíveis. Aqui, design não é apenas o que se vê, mas o que se sente.
-          Nos meus tempos livres gosto de fotografar, ler, escrever, ver animes
-          e criar &apos;coisas bonitas&apos;.
+          
         </p>
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
           Vamos construir algo extraordinário juntos.
