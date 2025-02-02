@@ -1,5 +1,6 @@
 import Layout from '@/components/layout/index'
 import Craft from '@/components/last-craft'
+import UI from '@/components/ui-components'
 import Works from '@/components/work'
 import Social from '@/components/social'
 
@@ -26,6 +27,7 @@ export default function page() {
           Tenho me divertido criando alguns componentes animados.
         </p>
         <Craft />
+        <UI />
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
           Sinta-se convidado para interagir comigo nas minhas redes sociais. É
           sempre bom conhecer pessoas novas e compartilhar experiências!

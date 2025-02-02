@@ -1,0 +1,41 @@
+.spinner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #3498db; /* Cor do primeiro traço */
+    animation: spin 1.5s linear infinite;
+  }
+  
+  .spinner::before,
+  .spinner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+  }
+  
+  .spinner::before {
+    border-top: 4px solid #e74c3c; /* Cor do segundo traço */
+    animation: spin 1.5s linear infinite reverse;
+  }
+  
+  .spinner::after {
+    border-top: 4px solid #2ecc71; /* Cor do terceiro traço */
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

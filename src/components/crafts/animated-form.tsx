@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { MotionConfig, motion } from 'framer-motion'
 import classNames from 'classnames'
 
-export default function LastCraft() {
+export default function AnimatedForm() {
   const [username, setUsername] = useState('')
   const [comment, setComment] = useState('')
   const [isSubmited, setIsSubmited] = useState(false)
@@ -58,7 +58,7 @@ export default function LastCraft() {
   }
 
   return (
-    <div className="mt-6 flex h-64 flex-col items-center justify-center rounded-lg bg-neutral-50 p-5 dark:bg-neutral-900/50">
+    <div className="">
       <MotionConfig transition={TRANSITION}>
         <motion.div
           layout
@@ -70,7 +70,7 @@ export default function LastCraft() {
           >
             <motion.input
               type="text"
-              placeholder="Digite seu nome"
+              placeholder="Type your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               animate={{
@@ -81,7 +81,7 @@ export default function LastCraft() {
               className={inputClass}
             />
             <motion.textarea
-              placeholder="Escreva seu comentário"
+              placeholder="Write a review"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               animate={{
@@ -96,7 +96,7 @@ export default function LastCraft() {
                 type="submit"
                 className="rounded-md bg-gradient-to-t from-gray-500 to-gray-400 px-5 py-1 text-xs text-neutral-50 duration-700 dark:from-gray-600 dark:to-gray-700"
               >
-                Enviar
+                Submit
               </button>
             </motion.div>
           </form>

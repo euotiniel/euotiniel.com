@@ -1,7 +1,7 @@
 const experiments = [
     {
         id: 1,
-        name: 'custom-tags',
+        name: 'Custom tags',
         description: 'A package with new html tags',
         link: 'https://github.com/euotiniel/custom-tags',
         tech: 'JavaScript',

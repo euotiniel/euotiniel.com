@@ -8,6 +8,7 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { BsArrowBarLeft } from 'react-icons/bs'
+import { icon } from '@/icons'
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -66,12 +67,10 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
       <div className="container mt-12 flex max-w-[580px] flex-col gap-3 px-5">
         <div className="flex w-full flex-row items-center justify-between">
-          <Link
-            href="/blog/"
-            className="mt-5 flex flex-row items-center gap-2 leading-6 tracking-normal text-muted-foreground"
-          >
-            <BsArrowBarLeft size={13} />
-            <span className="text-[13px]">voltar</span>
+          <Link href="/" className='my-5'>
+            <div className="rounded-full border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 opacity-40">
+              <icon.ArrowLeftIcon />
+            </div>
           </Link>
           <div></div>
         </div>

@@ -1,43 +1,34 @@
-"use client"
+"use client";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 type ProjectData = {
-  id: number
-  name: string
-  description: string
-  link: string
-  tech: string
-}
+  id: number;
+  name: string;
+  description: string;
+  link: string;
+  tech: string;
+};
 
 type ProjectsProps = {
-  projectsData: ProjectData[]
-}
+  projectsData: ProjectData[];
+};
 
-export default function projects({ projectsData }: ProjectsProps) {
+export default function Projects({ projectsData }: ProjectsProps) {
   return (
     <div className="mt-8 flex flex-col gap-4">
       {projectsData.map((proj) => (
-        <LinkPreview
-          url={proj.link}
-          className="border-b pb-2"
-          key={proj.id}
-          target="_blank"
-        >
-          <div className="flex flex-row items-center justify-between text-zinc-800 dark:text-zinc-200">
-            <div className="flex flex-col">
-              <p className="scroll-m-20 text-[14.9px] font-semibold leading-7 text-neutral-700 dark:text-neutral-300 tracking-tight">
-                {proj.name}
-              </p>
-            </div>
-
-            <div className="">
-              <p className="text-sm leading-7 [&:not(:first-child)]:mt-6  text-neutral-500 dark:text-neutral-500">
-                {proj.tech}
-              </p>
-            </div>
+        <LinkPreview url={proj.link} key={proj.id} target="_blank">
+          <div className="my-1 flex flex-row items-center w-full text-zinc-800 dark:text-zinc-200 group">
+            <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-300 tracking-tight whitespace-nowrap">
+              {proj.name}
+            </span>
+            <span className="flex-grow h-[1.5px] bg-neutral-700 dark:bg-neutral-400 mx-4 opacity-10"></span>
+            <span className="text-sm text-neutral-400 dark:text-neutral-500 whitespace-nowrap">
+              {proj.tech}
+            </span>
           </div>
         </LinkPreview>
       ))}
     </div>
-  )
+  );
 }
