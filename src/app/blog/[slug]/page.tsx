@@ -67,7 +67,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
       <div className="container mt-12 flex max-w-[580px] flex-col gap-3 px-5">
         <div className="flex w-full flex-row items-center justify-between">
-          <Link href="/" className='my-5'>
+          <Link href="/blog" className='my-5'>
             <div className="rounded-full border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 opacity-40">
               <icon.ArrowLeftIcon />
             </div>
@@ -78,7 +78,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           <time className="text-sm text-neutral-400" dateTime={post.date}>
             {format(parseISO(post.date), 'LLLL d, yyyy')}
           </time>
-          <h2 className="mt-2 scroll-m-20 pb-1 text-xl font-bold tracking-tight transition-colors">
+          <h2 className="text-[16.5px] mt-2 scroll-m-20 pb-1 text-xl font-bold tracking-tight transition-colors">
             {post.title}
           </h2>
         </div>

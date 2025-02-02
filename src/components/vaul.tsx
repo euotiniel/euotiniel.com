@@ -40,8 +40,8 @@ export default function VaulDrawer() {
       await axios.post(WEBHOOK_URL, {
         content: `Nome: ${data.name}\nMensagem: ${data.message}`,
       });
-      toast.success("Mensagem enviada com sucesso. 🎉", {
-        description: `Muito obrigado por tudo, ${data.name}. você fez a diferença no meu 2024!`,
+      toast.success(`Olá, ${data.name}. `, {
+        description: `A sua mensagem foi enviada com sucesso.Muito obrigado por partilhar isso comigo!`,
       });
       reset();
     } catch (error) {

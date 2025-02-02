@@ -9,9 +9,21 @@ import { Button } from "./ui/button";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
+  const [animating, setAnimating] = React.useState(false);
+
+  React.useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme && savedTheme !== theme) {
+      setTheme(savedTheme);
+    }
+  }, [theme, setTheme]);
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setAnimating(true);
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+
+    setTimeout(() => setAnimating(false), 200);
   };
 
   return (
@@ -26,7 +38,7 @@ export function ModeToggle() {
       <motion.div
         key={theme} 
         initial={{ rotate: 0, scale: 1 }}
-        animate={{ rotate: 110, scale: 1.1 }}
+        animate={animating ? { rotate: 80, scale: 1.1 } : {}}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         {theme === "dark" ? (

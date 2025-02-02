@@ -17,7 +17,7 @@ export default function PostCard(post: Post) {
           <span className="text-[15px] text-black dark:text-neutral-300 tracking-tight whitespace-nowrap">
           {truncateText(post.title, 35)}
             </span>
-          <span className="mx-4 h-[1.5px] flex-grow bg-neutral-700 opacity-10 dark:bg-neutral-400"></span>
+          <span className="mx-4 h-[1px] flex-grow bg-neutral-700 opacity-10 dark:bg-neutral-400"></span>
           <time
             dateTime={post.date}
             className="text-xs text-neutral-400 dark:text-neutral-500 select-none"

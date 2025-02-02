@@ -22,7 +22,7 @@ export default function Projects({ projectsData }: ProjectsProps) {
             <span className="text-[15px] text-black dark:text-neutral-300 tracking-tight whitespace-nowrap">
               {proj.name}
             </span>
-            <span className="flex-grow h-[1.5px] bg-neutral-700 dark:bg-neutral-400 mx-4 opacity-10"></span>
+            <span className="flex-grow h-[1px] bg-neutral-700 dark:bg-neutral-400 mx-4 opacity-10"></span>
             <span className="text-sm text-neutral-400 dark:text-neutral-500 whitespace-nowrap">
               {proj.tech}
             </span>
