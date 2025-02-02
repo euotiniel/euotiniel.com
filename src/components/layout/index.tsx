@@ -8,7 +8,7 @@ type LayoutProp = {
 export default function Index({ children }: LayoutProp) {
   return (
     <div className="flex justify-center px-5 py-20">
-      <div className="flex w-full max-w-[530px] flex-col">
+      <div className="flex w-full max-w-[540px] flex-col">
         <Header />
         <main className="pt-10">{children}</main>
         <Footer />

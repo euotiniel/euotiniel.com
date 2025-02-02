@@ -1,6 +1,6 @@
 export default function BluBottom() {
     return (
-      <div>
+      <div className="dark:hidden">
         <div
           className="fixed bottom-0 z-30 h-[30px] w-full backdrop-blur-sm"
           style={{

@@ -20,7 +20,7 @@ export default function ComponentPage({
 
   return (
     <div className="flex justify-center px-5 py-20">
-      <div className="flex w-full max-w-[530px] flex-col bg-background">
+      <div className="flex w-full max-w-[540px] flex-col bg-background">
       <header className="flex flex-col items-start">
           <Link href="/" className='my-5'>
             <div className="rounded-full border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 opacity-40">

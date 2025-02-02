@@ -1,6 +1,6 @@
 export default function BluTop() {
   return (
-    <div>
+    <div className="dark:hidden">
       <div
         className="fixed top-0 z-30 h-[60px] w-full backdrop-blur-sm"
         style={{

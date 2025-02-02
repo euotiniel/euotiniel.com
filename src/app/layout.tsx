@@ -64,8 +64,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={GeistSans.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
+      <body className={`overflow-y-auto h-[500px] scrollbar-custom ${GeistSans.className}`}>
+      <ThemeProvider attribute="class" defaultTheme="light">
           <BlurTop />
           {children}
           <BlurBottom />
