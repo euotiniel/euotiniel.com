@@ -80,7 +80,7 @@ export default function VaulDrawer() {
               <input
                 id="name"
                 {...register("name")}
-                className="text-sm border border-neutral-300 dark:border-neutral-800 bg-transparent w-full px-3 h-[2.4rem] rounded-lg outline-none focus:ring-2 focus:ring-black/5 text-neutral-300"
+                className="text-sm border border-neutral-300 dark:border-neutral-800 bg-transparent w-full px-3 h-[2.4rem] dark:text-neutral-300 text-neutral-800 rounded-lg outline-none "
               />
               {errors.name && (
                 <span className="text-red-500 text-xs">
@@ -98,7 +98,7 @@ export default function VaulDrawer() {
                 id="message"
                 rows={2}
                 {...register("message")}
-                className="text-sm border border-neutral-300 dark:border-neutral-800 bg-transparent w-full resize-none rounded-lg p-3 pt-2.5 dark:text-neutral-300 text-neutral-800 outline-none focus:ring-2 focus:ring-black/5 focus:ring-offset-0"
+                className="text-sm border border-neutral-300 dark:border-neutral-800 bg-transparent w-full resize-none rounded-lg p-3 pt-2.5 dark:text-neutral-300 text-neutral-800 outline-none"
               />
               {errors.message && (
                 <span className="text-red-500 text-xs">

@@ -5,7 +5,7 @@ import './global.css'
 import { GeistSans } from 'geist/font/sans';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from 'sonner'
 import BlurTop from "@/components/layout/blur-top"
 import BlurBottom from '@/components/layout/blur-bottom'
 
