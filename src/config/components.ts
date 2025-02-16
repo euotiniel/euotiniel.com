@@ -10,6 +10,13 @@ export type ComponentItem = {
 }
 
 export const components: ComponentItem[] = [
+  // {
+  //   title: "Formulário animado",
+  //   slug: "animated-form",
+  //   tags: ["nextjs", "tailwindcss", "framer-motion"],
+  //   description: "Um formulário de contato animado, com campos interativos e feedback visual para melhorar a experiência do usuário.",
+  //   component: Crafts['animated-form'],  
+  // },
   {
     title: "Card de Produto",
     slug: "card-product",
