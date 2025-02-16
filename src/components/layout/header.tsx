@@ -37,7 +37,7 @@ export default function Header() {
             |
           </li>
           <li>
-            <Link href="https://newsletter.euotiniel.com" className="p-1" target="_blank">
+            <Link href="https://newsletter.euotiniel.com" className="p-1">
               news
             </Link>
           </li>
