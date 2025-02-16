@@ -33,15 +33,14 @@ export default function Header() {
               blog
             </Link>
           </li>
-          {/* <li className="opacity-30">
-  |
-</li>
-<li>
-  <Link href="https://newsletter.euotiniel.com" className="p-1" target="_blank">
-    news
-  </Link>
-</li> */}
-
+          <li className="opacity-30">
+            |
+          </li>
+          <li>
+            <Link href="https://newsletter.euotiniel.com" className="p-1" target="_blank">
+              news
+            </Link>
+          </li>
           <li data-cursor="block">
             <ModeToggle />
           </li>
