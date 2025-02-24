@@ -7,14 +7,6 @@ const experiments = [
         tech: 'JavaScript',
     },
     {
-        id: 2,
-        name: 'Open vault',
-        description: 'Rotate to open the safe: 1, 2, 3... 💣',
-        link: 'https://open-vault.vercel.app/',
-        tech: 'Next.js',
-    },
-
-    {
         id: 3,
         name: 'Template',
         description: 'Landing page simulando o site de um lib ou framework',

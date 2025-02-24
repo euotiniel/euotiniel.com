@@ -1,20 +1,27 @@
 const projects = [
     {
         id: 1,
+        name: 'Validation Box',
+        description: 'A única biblioteca de validação - com regex flexível - que você precisa.',
+        link: 'https://vbox.euotiniel.com/docs/introduction',
+        tech: 'Typescript',
+    },
+    {
+        id: 2,
         name: 'SAPP',
         description: 'Sistema de Auxílio de Projectos da PAP',
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7105292648080404480/',
         tech: 'Laravel',
     },
     {
-        id: 2,
+        id: 3,
         name: 'Sócia',
         description: 'Plataforma de vendas',
         link: 'https://socia.ao/',
         tech: 'React.js',
     },
     {
-        id: 3,
+        id: 4,
         name: 'OG local',
         description: 'Teste as suas meta tags localmente',
         link: 'https://og-local.vercel.app/',
@@ -34,13 +41,13 @@ const projects = [
         link: 'https://noticraft.vercel.app/',
         tech: 'Next.js',
     },
-    {
-        id: 6,
-        name: '120 perguntas front-end',
-        description: 'Designed to provide quick and straightforward answers to questions you may encounter in your day-to-day life as a front-end developer',
-        link: 'https://fe-questions.vercel.app/',
-        tech: 'Next.js',
-    },
+    // {
+    //     id: 6,
+    //     name: '120 perguntas front-end',
+    //     description: 'Designed to provide quick and straightforward answers to questions you may encounter in your day-to-day life as a front-end developer',
+    //     link: 'https://fe-questions.vercel.app/',
+    //     tech: 'Next.js',
+    // },
     
 ];
 
