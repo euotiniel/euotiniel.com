@@ -1,35 +1,36 @@
-"use client";
-import { LinkPreview } from "@/components/ui/link-preview";
+'use client'
+import { LinkPreview } from '@/components/ui/link-preview'
+import DecryptedText from '@/components/decrypted-text'
 
 type ProjectData = {
-  id: number;
-  name: string;
-  description: string;
-  link: string;
-  tech?: string;
-  data?: string;
-};
+  id: number
+  name: string
+  description: string
+  link: string
+  tech?: string
+  data?: string
+}
 
 type ProjectsProps = {
-  projectsData: ProjectData[];
-};
+  projectsData: ProjectData[]
+}
 
 export default function Projects({ projectsData }: ProjectsProps) {
   return (
     <div className="mt-8 flex flex-col gap-4">
       {projectsData.map((proj) => (
         <LinkPreview url={proj.link} key={proj.id} target="_blank">
-          <div className="my-1 flex flex-row items-center w-full text-zinc-800 dark:text-zinc-200 group">
-            <span className="text-[15px] text-black dark:text-neutral-300 tracking-tight whitespace-nowrap">
-              {proj.name}
+          <div className="group my-1 flex w-full flex-row items-center text-zinc-800 dark:text-zinc-200">
+            <span className="whitespace-nowrap text-[15px] tracking-tight text-black dark:text-neutral-300">
+              <DecryptedText text={proj.name} />
             </span>
-            <span className="flex-grow h-[1px] bg-neutral-700 dark:bg-neutral-400 mx-4 opacity-10"></span>
-            <span className="text-sm text-neutral-400 dark:text-neutral-500 whitespace-nowrap">
+            <span className="mx-4 h-[1px] flex-grow bg-neutral-700 opacity-10 dark:bg-neutral-400"></span>
+            <span className="whitespace-nowrap text-sm text-neutral-400 dark:text-neutral-500">
               {proj.tech}
             </span>
           </div>
         </LinkPreview>
       ))}
     </div>
-  );
+  )
 }

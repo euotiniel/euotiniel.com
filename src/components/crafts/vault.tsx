@@ -85,7 +85,7 @@ export default function Vault() {
           simulando a interface de um cofre digital. Este componente ainda
           precisa de muitos ajustes, mas decidi compartilhá-lo de qualquer
           maneira. Foi inspirado no incrível trabalho de @Ibelick, especialmente
-          no componente 'dcm'.
+          no componente &apos;dcm&apos;.
         </p>
 
         <Preview height="500px">
