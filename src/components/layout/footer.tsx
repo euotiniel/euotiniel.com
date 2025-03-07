@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="mr-2 h-2 w-2 rounded-full bg-green-300 dark:bg-green-800 animate-pulse"></div>
         <div>
           <motion.p className="text-xs">
-            há{' '}
+            conectado há{' '}
             <motion.span
               key={timeElapsed}
               initial={{ opacity: 0, filter: 'blur(4px)' }}

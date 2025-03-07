@@ -7,8 +7,8 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import NextImage from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { BsArrowBarLeft } from 'react-icons/bs'
-import { icon } from '@/icons'
+import Layout from '@/components/layout/index'
+import { ArrowLeftIcon } from '@/icons/arrow-left'
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -65,11 +65,12 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-      <div className="container mt-12 flex max-w-[580px] flex-col gap-3 px-5">
+    <div className="flex justify-center px-5 py-20">
+      <div className="flex w-full max-w-[550px] flex-col">
         <div className="flex w-full flex-row items-center justify-between">
-          <Link href="/blog" className='my-5'>
-            <div className="rounded-full border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 opacity-40">
-              <icon.ArrowLeftIcon />
+          <Link href="/blog" className="my-5">
+            <div className="rounded-full border-transparent bg-neutral-500 opacity-20 ">
+              <ArrowLeftIcon className="h-8 w-8" />
             </div>
           </Link>
           <div></div>
@@ -78,7 +79,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           <time className="text-sm text-neutral-400" dateTime={post.date}>
             {format(parseISO(post.date), 'LLLL d, yyyy')}
           </time>
-          <h2 className="text-[16.5px] mt-2 scroll-m-20 pb-1 text-xl font-bold tracking-tight transition-colors">
+          <h2 className="mt-2 scroll-m-20 pb-1 text-[16.5px] text-xl font-bold tracking-tight transition-colors">
             {post.title}
           </h2>
         </div>
@@ -86,6 +87,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           <MDXContent components={mdxComponents} />
         </article>
       </div>
+    </div>
   )
 }
 

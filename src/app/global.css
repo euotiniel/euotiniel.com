@@ -221,3 +221,20 @@ input[type='email'] {
 [data-rehype-pretty-code-title] + pre {
   @apply mt-0 rounded-t-none border-t-0;
 }
+
+@keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+.animate-spinner {
+  animation: spinner 1.2s linear infinite;
+}
+
+::selection {
+  background-color: rgba(128, 128, 128, 0.167); 
+}

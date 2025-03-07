@@ -6,7 +6,8 @@ type ProjectData = {
   name: string;
   description: string;
   link: string;
-  tech: string;
+  tech?: string;
+  data?: string;
 };
 
 type ProjectsProps = {

@@ -3,46 +3,69 @@ import { Crafts } from '@/components/crafts'
 export type ComponentItem = {
   title: string;
   slug: keyof typeof Crafts;
-  tags: string[];
   description?: string;
   component: typeof Crafts[keyof typeof Crafts];
+  date?: string;
   mdxPath?: string; 
 }
 
 export const components: ComponentItem[] = [
-  // {
-  //   title: "Formulário animado",
-  //   slug: "animated-form",
-  //   tags: ["nextjs", "tailwindcss", "framer-motion"],
-  //   description: "Um formulário de contato animado, com campos interativos e feedback visual para melhorar a experiência do usuário.",
-  //   component: Crafts['animated-form'],  
-  // },
+ 
   {
-    title: "Card de Produto",
-    slug: "card-product",
-    tags: ["nextjs", "tailwindcss", "framer-motion"],
-    description: "Um cartão interativo para exibição de produtos, trazendo uma experiência visual moderna e fluida. Ideal para e-commerces e vitrines digitais.",
-    component: Crafts['card-product'],  
-  },
-  {
-    title: "Disco de Álbum",
-    slug: "album-disk",
-    tags: ["nextjs", "tailwindcss", "framer-motion"],
-    description: "Um componente estilizado que simula a exibição de um disco de álbum, perfeito para sites musicais ou galerias de mídia.",
-    component: Crafts['album-disk'],  
-  },
-  {
-    title: "Cofre Virtual",
-    slug: "vault",
-    tags: ["nextjs", "tailwindcss", "framer-motion"],
-    description: "Um layout seguro e dinâmico para armazenar informações sensíveis, simulando a interface de um cofre digital. Este componente ainda precisa de muitos ajustes, mas decidi compartilhá-lo assim mesmo. Ele foi inspirado no incrível trabalho de @Ibelick, especialmente no componente 'dcm'.",
-    component: Crafts['vault'],
+    title: "Newsletter",
+    slug: "newsletter",
+    description: "I developed this component for my newsletter, and the idea was to integrate a notice into the same card, but in a more different and minimalist way. The detail that won me over the most was this orange, which gives a special touch to the design.",
+    component: Crafts['newsletter'],
+    date: "Fev, 2025"
   },
   // {
-  //   title: "Botão Interativo",
-  //   slug: "button",
-  //   tags: ["nextjs", "tailwindcss", "framer-motion"],
+  //   title: "Tracking progress",
+  //   slug: "tracking-progress",
   //   description: "Um botão animado que reage às interações do usuário, trazendo feedback visual imediato para melhorar a experiência.",
-  //   component: Crafts['button'],
+  //   component: Crafts['tracking-progress'],
+  //   date: "Fev, 2025"
   // },
+
+  {
+    title: "Album Disk",
+    slug: "album-disk",
+    description: "A stylized component that simulates the display of an album disc, perfect for music websites or media galleries.",
+    component: Crafts['album-disk'],  
+    date: "Nov, 2024"
+  },
+  {
+    title: "Gallery (Challenge)",
+    slug: "gallery",
+    description: "This component came from a challenge I saw on Twitter, posted by Ishan. It was a fun experiment because there are many ways to achieve this effect, but I settled on this approach at the time. Maybe someday, I’ll revisit it and make improvements.",
+    component: Crafts['gallery'],
+    date: "Aug, 2024"
+  },
+  {
+    title: "Virtual Vault",
+    slug: "vault",
+    description: "A secure and dynamic layout for storing sensitive information, simulating the interface of a digital vault. This component still needs a lot of tweaking, but I decided to share it anyway. It was inspired by @Ibelick's amazing work, especially the 'dcm' component.",
+    component: Crafts['vault'],
+    date: "Aug, 2024"
+  },
+  {
+    title: "Animated Form",
+    slug: "animated-form",
+    description: "Here we have an interactive input, which dynamically expands to a textarea when filled in correctly. The goal was to create a fluid and intuitive experience.",
+    component: Crafts['animated-form'],
+    date: "Aug, 2024"
+  },
+  {
+    title: "Card Product",
+    slug: "card-product",
+    description: "An interactive card for product display, bringing a modern and fluid visual experience. Ideal for e-commerces and digital showcases.",
+    component: Crafts['card-product'], 
+    date: "Aug, 2024" 
+  },
+  {
+    title: "Interactive button",
+    slug: "button",
+    description: "This component was from an incredible demo of Emil Kowalski's course. Since then, I've been thinking of ways to improve it even more. I love how it responds to user interactions, bringing a touch of fluidity and animation that makes all the difference. This is, without a doubt, one of my favorites.",
+    component: Crafts['button'],
+    date: "Out, 2024"
+  },
 ]

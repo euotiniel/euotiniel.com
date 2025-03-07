@@ -1,84 +1,88 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { icon } from "@/icons";
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Spinner } from '@/icons/spinner'
+import CircleDone from '@/icons/circle-done'
+import HeaderDetails from '@/components/layout/header-details'
+import Preview from '@/components/layout/preview'
 
 const buttonCopy = {
   initial: {
-    text: "Submit form",
-    icon: "",
-    sty: "to-blue-500 from-blue-600",
+    text: 'Submit form',
+    icon: '',
+    sty: 'to-blue-500 from-blue-600',
   },
   loading: {
-    text: "Waiting...",
-    icon: <icon.Spinner />,
-    sty: "bg-blue-600/80",
+    text: 'Waiting...',
+    icon: <Spinner size="h-[16px] w-[16px]" />,
+    sty: 'bg-blue-600',
   },
   success: {
-    text: "Done!",
-    icon: <CheckIcon />,
-    sty: "to-green-500 from-green-600",
+    text: 'Done!',
+    icon: <CircleDone />,
+    sty: 'to-green-500 from-green-700',
   },
-};
+}
 
-type ButtonStateKey = "initial" | "loading" | "success";
+type ButtonStateKey = 'initial' | 'loading' | 'success'
 
 interface ButtonCopy {
-  text: string | any;
-  sty: string;
-  icon?: string;
+  text: string | any
+  sty: string
+  icon?: string
 }
 
 export default function SmoothButton() {
-  const [buttonState, setButtonState] = useState<ButtonStateKey>("initial");
+  const [buttonState, setButtonState] = useState<ButtonStateKey>('initial')
 
   return (
-      <button
-        className={`${buttonCopy[buttonState].sty} text-sm font-semibold bg-gradient-to-t text-neutral-100 h-8 w-[140px] rounded-lg`}
-        disabled={buttonState === "loading"}
-        onClick={() => {
-          if (buttonState === "success") return;
+    <main className="py-6">
+      <HeaderDetails title="Interactive button" date="Out, 2024" />
+      <article className="mt-10 max-w-none">
+        <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+          {' '}
+          Este componente foi de uma demonstração incrível do curso de Emil
+          Kowalski. Desde então, tenho pensado em maneiras de melhorá-lo ainda
+          mais. Adoro como ele responde às interações do usuário, trazendo um
+          toque de fluidez e animação que faz toda a diferença. Este é, sem
+          dúvida, um dos meus favoritos!
+        </p>
 
-          setButtonState("loading");
+        <Preview height="400px">
+          <button
+            className={`${buttonCopy[buttonState].sty} h-8 w-[120px] cursor-pointer rounded-md bg-gradient-to-t text-sm font-semibold text-neutral-100`}
+            disabled={buttonState === 'loading'}
+            onClick={() => {
+              if (buttonState === 'success') return
 
-          setTimeout(() => {
-            setButtonState("success");
-          }, 2500);
+              setButtonState('loading')
 
-          setTimeout(() => {
-            setButtonState("initial");
-          }, 5500);
-        }}
-      >
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            transition={{ type: "spring", duration: 0.6, bounce: 0.1 }}
-            initial={{ opacity: 0, y: -4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 9 }}
-            key={buttonState}
-            className="flex flex-row items-center justify-center gap-1.5 text-sm font-medium h-full"
+              setTimeout(() => {
+                setButtonState('success')
+              }, 2000)
+
+              setTimeout(() => {
+                setButtonState('initial')
+              }, 4000)
+            }}
           >
-            {buttonCopy[buttonState].icon}
-            {buttonCopy[buttonState].text}
-          </motion.span>
-        </AnimatePresence>
-      </button>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <Image src="/images/check.png" alt="Check icon" height={16} width={16} />
-  );
-}
-
-function LoaderIcon() {
-  return (
-    <div className="animate-spin360">
-        <Image src="/images/loader.png" alt="Check icon" height={16} width={16} />
-    </div>
-  );
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                transition={{ type: 'spring', duration: 0.3, bounce: 0.2 }}
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 9 }}
+                key={buttonState}
+                className="flex h-full flex-row items-center justify-center gap-1.5 font-sans text-[14.5px] font-medium"
+              >
+                {buttonCopy[buttonState].icon}
+                {buttonCopy[buttonState].text}
+              </motion.span>
+            </AnimatePresence>
+          </button>
+        </Preview>
+      </article>
+    </main>
+  )
 }

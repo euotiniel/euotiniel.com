@@ -36,16 +36,15 @@ export default function Blog() {
 
   return (
     <Layout>
-      <h1 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Blog</h1>
-      <p className='text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6'>
-      Meu artigo ganhou um react (não js) no
-        canal do Lucas Montano. Leia o{' '}
-        <Links olink="https://euotiniel.com/blog/portfolios">artigo</Links> e
-        assista ao{' '}
+      <h1 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
+        Blog
+      </h1>
+      <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+        Assista ao{' '}
         <Links olink="https://www.youtube.com/watch?v=teU_RL7QOT4&t=15s">
           vídeo
         </Links>
-        . 
+        do Lucas Montano ao fazer um react (não js) do meu artigo.
         Você também pode encontrar outros artigos na{' '}
         <Links olink="https://blog.aosc.social/">aosc</Links> e{' '}
         <Links olink="https://web.facebook.com/artigosemanal">
@@ -54,7 +53,7 @@ export default function Blog() {
         .
       </p>
 
-      <div className="flex flex-col items-start gap-10 mt-8 dark:border-gray-700">
+      <div className="mt-8 flex flex-col items-start gap-10 dark:border-gray-700">
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}

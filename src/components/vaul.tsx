@@ -68,7 +68,7 @@ export default function VaulDrawer() {
               Escreva para mim!
             </Drawer.Title>
             <Drawer.Description className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400">
-              Olá! Deixe a sua mensagem — um pensamento, um feedback, ou qualquer coisa que queira compartilhar comigo.
+              Deixe a sua mensagem — um pensamento, um feedback, ou qualquer coisa que queira compartilhar comigo.
             </Drawer.Description>
             <form onSubmit={handleSubmit(onSubmit)}>
               <label
@@ -109,7 +109,7 @@ export default function VaulDrawer() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="h-9 rounded-md bg-gradient-to-t from-gray-500 to-gray-400 mt-4 mb-5 w-full font-medium disabled:opacity-50 disabled:cursor-not-allowed opacity-80 text-neutral-50 duration-700 dark:from-gray-600 dark:to-gray-700"
+                className="h-8 text-sm rounded-md bg-gradient-to-t from-gray-500 to-gray-400 mt-4 mb-5 w-full font-medium disabled:opacity-50 disabled:cursor-not-allowed opacity-80 text-neutral-50 duration-700 dark:from-gray-600 dark:to-gray-700"
               >
                 {isSubmitting ? "Enviando..." : "Enviar"}
               </button>

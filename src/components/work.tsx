@@ -3,7 +3,7 @@ import experiences from '@/data/experience'
 
 export default function Work() {
   return (
-    <div className="flex flex-col gap-y-6 py-8">
+    <div className="flex flex-col gap-y-6 py-5">
       <h2 className="text-[15.8px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300">
         Experiência
       </h2>
@@ -15,8 +15,8 @@ export default function Work() {
               <Image
                 src={experience.logo}
                 alt={`${experience.company} logo`}
-                width={28}
-                height={28}
+                width={25}
+                height={25}
                 className="h-auto w-full filter grayscale dark:invert select-none"
               />
             </div>
@@ -25,10 +25,10 @@ export default function Work() {
                 {experience.company}
               </span>
               <div className="flex items-center justify-between pt-1">
-                <span className="text-[13.3px] leading-none text-neutral-500 dark:text-neutral-400">
+                <span className="text-[13.3px] leading-none text-neutral-500 dark:text-neutral-400 opacity-50">
                   {experience.role}
                 </span>
-                <span className="text-[12.5px] leading-none text-neutral-500 dark:text-neutral-400">
+                <span className="text-[12.5px] leading-none text-neutral-500 dark:text-neutral-400 opacity-50">
                   {experience.period}
                 </span>
               </div>

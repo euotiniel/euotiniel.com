@@ -13,13 +13,13 @@ const projects = [
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7105292648080404480/',
         tech: 'Laravel',
     },
-    {
-        id: 3,
-        name: 'Sócia',
-        description: 'Plataforma de vendas',
-        link: 'https://socia.ao/',
-        tech: 'React.js',
-    },
+    // {
+    //     id: 3,
+    //     name: 'Sócia',
+    //     description: 'Plataforma de vendas',
+    //     link: 'https://socia.ao/',
+    //     tech: 'React.js',
+    // },
     {
         id: 4,
         name: 'OG local',

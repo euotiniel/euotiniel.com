@@ -5,6 +5,7 @@ import AllProjects from '@/data/projects'
 import Experiments from '@/data/experiments'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
+import UI from '@/components/ui-components'
 
 const meta = {
   title: 'Projectos',
@@ -44,7 +45,13 @@ export default function page() {
           </div>
         </div>
         <div>
-          <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos 🧪</h2>
+          <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>UI</h2>
+          <div>
+            <UI />
+          </div>
+        </div>
+        <div>
+          <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos</h2>
           <div>
             <ProjectList projectsData={Experiments} />
           </div>
