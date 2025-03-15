@@ -15,7 +15,7 @@ export function Spinner({ size }: SpinnerProps) {
             key={`spinner-bar-${i}`}
             aria-label={`spinner-bar-${i + 1}`}
             className={cn(
-              "absolute -left-[10%] -top-[3.9%] h-[8%] w-[24%] animate-spinner rounded-md bg-white dark:bg-black",
+              "absolute -left-[10%] -top-[3.9%] h-[8%] w-[24%] animate-spinner rounded-md bg-white",
               `bar:nth-child(${i + 1})`
             )}
             style={{
