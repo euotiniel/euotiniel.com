@@ -8,9 +8,9 @@ export const calculateTimeElapsed = (startTime: number): string => {
     const days = Math.floor(hours / 24);
     const weeks = Math.floor(days / 7);
   
-    if (weeks > 0) return `${weeks} sem`;
-    if (days > 0) return `${days} d`;
-    if (hours > 0) return `${hours} h`;
-    if (minutes > 0) return `${minutes} min`;
-    return `${seconds} s`;
+    if (weeks > 0) return `${weeks}`;
+    if (days > 0) return `${days}`;
+    if (hours > 0) return `${hours}`;
+    if (minutes > 0) return `${minutes}`;
+    return `${seconds}`;
   };
