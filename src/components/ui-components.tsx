@@ -16,7 +16,7 @@ export default function Components() {
             <p className="whitespace-nowrap text-[14.5px] leading-7 text-neutral-700 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
               <DecryptedText text={item.title} />
             </p>
-            <span className="mx-4 h-[1px] flex-grow bg-neutral-600 opacity-5 dark:bg-neutral-400"></span>
+            <span className="mx-4 h-[1px] flex-grow border-t border-dashed border-neutral-800 opacity-50 dark:border-neutral-400"></span>
             <span className="whitespace-nowrap text-sm text-neutral-400 dark:text-neutral-500">
               {item.date}
             </span>
