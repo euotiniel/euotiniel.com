@@ -24,7 +24,7 @@ export default function Projects({ projectsData }: ProjectsProps) {
             <span className="whitespace-nowrap text-[15px] tracking-tight text-black dark:text-neutral-300">
               <DecryptedText text={proj.name} />
             </span>
-            <span className="mx-4 h-[1px] flex-grow bg-neutral-700 opacity-10 dark:bg-neutral-400"></span>
+            <span className="mx-4 h-[1px] flex-grow border-t border-dashed border-neutral-800 opacity-50 dark:border-neutral-400"></span>
             <span className="whitespace-nowrap text-sm text-neutral-400 dark:text-neutral-500">
               {proj.tech}
             </span>
