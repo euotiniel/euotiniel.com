@@ -14,13 +14,13 @@ export default function page() {
       </span>
       <div className="mt-6">
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-        Combino código e design para criar experiências intuitivas e minimalistas. Para mim, design não é só o que se vê, mas também como cada detalhe faz você se sentir.          
+        Combino código e design para criar experiências fluídas e minimalistas. Para mim, design não é só o que se vê, mas como cada detalhe faz você se sentir.          
         </p>
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
           Vamos construir algo extraordinário juntos.  <VaulDrawer />
         </p>
         <Works />
-        <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
+        <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 pt-10">
           Sinta-se convidado para interagir comigo nas minhas redes sociais. É
           sempre bom conhecer pessoas novas e compartilhar experiências!
         </p>
