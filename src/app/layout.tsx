@@ -70,8 +70,6 @@ export default function RootLayout({
           {children}
           <BlurBottom />
           <Toaster />
-          <Analytics />
-          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
