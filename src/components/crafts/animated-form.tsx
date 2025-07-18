@@ -38,7 +38,7 @@ export default function AnimatedForm() {
   })
 
   const inputClass = classNames(
-    'p-1 text-xs rounded-md focus:outline-none w-[170px]',
+    'p-1 text-xs rounded-md focus:outline-none w-[170px] dark:placeholder:text-neutral-200/40',
     {
       hidden: isSubmited,
       block: !isSubmited,

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from '@/components/links'
 import { calculateTimeElapsed } from '@/lib/timeUtils'
 import { calculateTimeElapsedStr } from '@/lib/strTimeUtils'
@@ -49,18 +50,29 @@ export default function Footer() {
   }
 
   return (
-    <footer className="my-8 flex flex-col items-center justify-between text-neutral-600 dark:text-neutral-400 md:my-14 md:flex-row">
-      <div className="mt-9 sm:mb-3">
-        <small className="text-xs leading-none">
-          2025 &copy;{' '}
-          <Link olink="https://twitter.com/euotiniel">euotiniel</Link>
-        </small>
+    <footer className="my-8 flex flex-col items-center justify-between text-neutral-600 dark:text-neutral-400 md:my-14 md:flex-row opacity-50">
+       <div className="flex items-center gap-1.5 ">
+        <span className='text-xs'>Built by</span>
+        <a
+          target="_blank"
+          href="https://x.com/smintfy"
+          className="hover:text-tertiary flex h-5 items-center gap-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 pr-1.5 pl-0.5 hover:bg-[#f0f0f0] text-xs"
+        >
+          <img
+            src="https://github.com/euotiniel.png"
+          alt="Logotipo Otoniel Emanuel"
+            width={16}
+            height={16}
+            className="rounded-full outline-1 outline-black/5 dark:invert dark:opacity-50"
+          />
+          euotiniel
+        </a>
       </div>
       <div className="mt-4 flex items-center text-center">
         <div className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500 dark:bg-green-700"></div>
         <div>
           <motion.p className="text-xs">
-            conectado há{' '}
+            online {' '}
             <motion.span
               key={timeElapsed}
               initial={{ opacity: 0, filter: 'blur(4px)' }}

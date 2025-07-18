@@ -2,7 +2,7 @@ import { ThemeProvider } from '@/app/providers'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import './global.css'
-import { GeistSans } from 'geist/font/sans';
+import { Inter } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from 'sonner'
@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   },
 }
 
+const inter = Inter({ subsets: ['latin'] })
+
 export default function RootLayout({
   children,
 }: {
@@ -64,13 +66,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={`overflow-y-auto h-[500px] scrollbar-custom ${GeistSans.className}`}>
-      <ThemeProvider attribute="class" defaultTheme="light">
+      <body className={`overflow-y-auto h-[500px] scrollbar-custom ${inter.className}`}>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <BlurTop />
           {children}
           <BlurBottom />
           <Toaster />
         </ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

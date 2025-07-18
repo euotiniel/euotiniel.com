@@ -41,13 +41,13 @@ const projects = [
         link: 'https://noticraft.vercel.app/',
         tech: 'Next.js',
     },
-    // {
-    //     id: 6,
-    //     name: '120 perguntas front-end',
-    //     description: 'Designed to provide quick and straightforward answers to questions you may encounter in your day-to-day life as a front-end developer',
-    //     link: 'https://fe-questions.vercel.app/',
-    //     tech: 'Next.js',
-    // },
+    {
+        id: 6,
+        name: 'shadcn-alias',
+        description: 'A CLI tool to automatically generate a file to centralize your shadcn/ui component imports.',
+        link: 'https://github.com/euotiniel/shadcn-alias',
+        tech: 'TypeScript',
+    },
     
 ];
 

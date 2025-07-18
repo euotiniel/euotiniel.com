@@ -37,8 +37,8 @@ export default function page() {
         <div>
           <h1 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</h1>
           <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-           Descubra outros projectos no meu{' '}
-            <Links olink="https://github.com/euotiniel/">GitHub</Links>. 
+           Alguns esboços e experimentos públicos de UI abertos no
+            <Links olink="https://www.figma.com/design/xmqXqu3qyHJaee08kklN6S/UIs?node-id=0-1&t=kSLsHWoqxSTRkigO-1">Figma</Links>. 
           </p>
           <div>
             <ProjectList projectsData={AllProjects} />
