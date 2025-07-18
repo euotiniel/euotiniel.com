@@ -98,7 +98,7 @@ export default function Footer() {
         <span className="text-xs">Built by</span>
         <a
           target="_blank"
-          href="https://x.com/smintfy"
+          href="https://x.com/euotiniel"
           className="hover:text-tertiary flex h-5 items-center gap-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 pr-1.5 pl-0.5 hover:bg-[#f0f0f0] text-xs"
         >
           <img
