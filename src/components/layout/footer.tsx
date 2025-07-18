@@ -112,8 +112,12 @@ export default function Footer() {
         </a>
       </div>
       <div className="mt-4 flex items-center text-center">
-        <div className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500 dark:bg-green-700"></div>
-        <div>
+        <span className="relative flex items-center justify-center w-4 h-4">
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="h-2 w-2 bg-green-500/50 rounded-full animate-ping"></span>
+          </span>
+          <span className="relative h-1.5 w-1.5 bg-green-500 rounded-full"></span>
+        </span>        <div>
           <motion.p className="text-xs">
             online{' '}
             <AnimatedNumber value={timeElapsed} />
