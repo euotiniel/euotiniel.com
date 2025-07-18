@@ -1,11 +1,54 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from '@/components/links'
 import { calculateTimeElapsed } from '@/lib/timeUtils'
 import { calculateTimeElapsedStr } from '@/lib/strTimeUtils'
+
+function AnimatedNumber({ value }: { value: string }) {
+  const [prev, setPrev] = useState(value)
+
+  useEffect(() => {
+    setPrev(value)
+  }, [value])
+
+  // Separa número e unidade (ex: "20 min" => ["20", "min"])
+  const match = value.match(/^(\d+)\s*(\w*)$/)
+  const number = match ? match[1] : value
+  const unit = match ? match[2] : ''
+
+  return (
+    <span className="inline-flex items-center">
+      {number.split('').map((digit, idx) => (
+        <span
+          key={idx}
+          className="relative w-[0.65em] h-[1em] inline-block overflow-hidden"
+        >
+          <AnimatePresence initial={false}>
+            <motion.span
+              key={digit + idx}
+              initial={{ y: -12, opacity: 0, filter: 'blur(4px)' }}
+              animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
+              exit={{ y: 12, opacity: 0, filter: 'blur(4px)' }}
+              transition={{
+                y: { duration: 0.28, ease: [0.215, 0.61, 0.355, 1] },
+                opacity: { duration: 0.22, ease: [0.215, 0.61, 0.355, 1] },
+                filter: { duration: 0.22, ease: [0.215, 0.61, 0.355, 1] },
+              }}
+              className="absolute left-0 top-0 w-full text-xs"
+              style={{ willChange: 'transform, opacity, filter' }}
+            >
+              {digit}
+            </motion.span>
+          </AnimatePresence>
+        </span>
+      ))}
+      <span className="ml-0.5">{unit}</span>
+    </span>
+  )
+}
 
 export default function Footer() {
   const [timeElapsed, setTimeElapsed] = useState('')
@@ -51,8 +94,8 @@ export default function Footer() {
 
   return (
     <footer className="my-8 flex flex-col items-center justify-between text-neutral-600 dark:text-neutral-400 md:my-14 md:flex-row opacity-50">
-       <div className="flex items-center gap-1.5 ">
-        <span className='text-xs'>Built by</span>
+      <div className="flex items-center gap-1.5 ">
+        <span className="text-xs">Built by</span>
         <a
           target="_blank"
           href="https://x.com/smintfy"
@@ -60,7 +103,7 @@ export default function Footer() {
         >
           <img
             src="https://github.com/euotiniel.png"
-          alt="Logotipo Otoniel Emanuel"
+            alt="Logotipo Otoniel Emanuel"
             width={16}
             height={16}
             className="rounded-full outline-1 outline-black/5 dark:invert dark:opacity-50"
@@ -72,15 +115,8 @@ export default function Footer() {
         <div className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500 dark:bg-green-700"></div>
         <div>
           <motion.p className="text-xs">
-            online {' '}
-            <motion.span
-              key={timeElapsed}
-              initial={{ opacity: 0, filter: 'blur(4px)' }}
-              animate={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.4 }}
-            >
-              {timeElapsed}
-            </motion.span>
+            online{' '}
+            <AnimatedNumber value={timeElapsed} />
             <motion.span
               key={timeElapsedStr}
               initial={{ opacity: 0, filter: 'blur(4px)' }}
