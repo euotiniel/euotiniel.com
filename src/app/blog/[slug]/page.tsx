@@ -69,7 +69,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
       <div className="flex w-full max-w-[550px] flex-col">
         <div className="flex w-full flex-row items-center justify-between">
           <Link href="/blog" className="my-5">
-            <div className="rounded-full border-transparent bg-neutral-500 opacity-20 ">
+            <div className="rounded-full border-transparent bg-neutral-500/70 opacity-20 ">
               <ArrowLeftIcon className="h-8 w-8" />
             </div>
           </Link>

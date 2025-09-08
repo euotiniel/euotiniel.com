@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 const meta = {
   title: 'Secret',
   description: 'Olá, daqui fala o Otoniel. Deixe mensagem...',
-  url: `${WEBSITE_HOST_URL}/about`,
+  url: `${WEBSITE_HOST_URL}/secretbook`,
 }
 
 export const metadata: Metadata = {

@@ -10,7 +10,7 @@ import UI from '@/components/ui-components'
 const meta = {
   title: 'Projectos',
   description: 'Explore alguns dos meus projectos',
-  url: `${WEBSITE_HOST_URL}/about`,
+  url: `${WEBSITE_HOST_URL}/projects`,
 }
 
 export const metadata: Metadata = {
@@ -33,25 +33,34 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Layout>
-      <div className='flex flex-col gap-14'>
+      <div className="flex flex-col gap-14">
         <div>
-          <h1 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Projectos</h1>
+          <h1 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
+            Projectos
+          </h1>
           <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-           Alguns esboços e experimentos públicos de UI abertos no
-            <Links olink="https://www.figma.com/design/xmqXqu3qyHJaee08kklN6S/UIs?node-id=0-1&t=kSLsHWoqxSTRkigO-1">Figma</Links>. 
+            Veja meus trabalhos mais soltos no
+            <Links olink="https://x.com/euotiniel">Twitter</Links>e alguns
+            esboços de UI abertos no
+            <Links olink="https://www.figma.com/design/xmqXqu3qyHJaee08kklN6S/UIs?node-id=0-1&t=kSLsHWoqxSTRkigO-1">
+              Figma
+            </Links>
+            .
           </p>
           <div>
             <ProjectList projectsData={AllProjects} />
           </div>
         </div>
-        <div>
+        {/* <div>
           <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>UI</h2>
           <div>
             <UI />
           </div>
-        </div>
+        </div> */}
         <div>
-          <h2 className='font-semibold text-[16.5px] leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6'>Experimentos</h2>
+          <h2 className="text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300 [&:not(:first-child)]:mt-6">
+            Experimentos
+          </h2>
           <div>
             <ProjectList projectsData={Experiments} />
           </div>

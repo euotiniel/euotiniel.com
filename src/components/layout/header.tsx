@@ -24,7 +24,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/projectos" className="p-1">
+            <Link href="/projects" className="p-1">
               projectos
             </Link>
           </li>

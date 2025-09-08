@@ -6,13 +6,13 @@ const experiments = [
         link: 'https://github.com/euotiniel/custom-tags',
         tech: 'JavaScript',
     },
-    {
-        id: 3,
-        name: 'Template',
-        description: 'Landing page simulando o site de um lib ou framework',
-        link: 'https://notes-react-gamma.vercel.app/',
-        tech: 'Next.js',
-    },
+    // {
+    //     id: 3,
+    //     name: 'Template',
+    //     description: 'Landing page simulando o site de um lib ou framework',
+    //     link: 'https://notes-react-gamma.vercel.app/',
+    //     tech: 'Next.js',
+    // },
 ];
 
 export default experiments;
