@@ -93,7 +93,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="my-8 flex flex-col items-center justify-between text-neutral-600 dark:text-neutral-400 md:my-14 md:flex-row opacity-50">
+    <footer className="my-16 flex flex-col items-center justify-between text-neutral-600 dark:text-neutral-400 md:my-14 md:flex-row opacity-50">
       <div className="flex items-center gap-1.5 ">
         <span className="text-xs">Built by</span>
         <a
@@ -111,7 +111,7 @@ export default function Footer() {
           euotiniel
         </a>
       </div>
-      <div className="mt-4 flex items-center text-center">
+      <div className="mt-8 md:mt-0 flex items-center text-center">
         <span className="relative flex items-center justify-center w-4 h-4">
           <span className="absolute inset-0 flex items-center justify-center">
             <span className="h-2 w-2 bg-green-500/50 rounded-full animate-ping"></span>

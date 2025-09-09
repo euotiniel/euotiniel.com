@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 const meta = {
   title: 'Blog',
   description: 'Leia os meus artigos',
-  url: `${WEBSITE_HOST_URL}/about`,
+  url: `${WEBSITE_HOST_URL}/blog`,
 }
 
 export const metadata: Metadata = {
