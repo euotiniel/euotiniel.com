@@ -14,7 +14,7 @@ export default function page() {
       </span>
       <div className="mt-6">
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
-        Combino <span className='transition-all border-b text-neutral-600 duration-500 cursor-default select-none'>design & código</span> para criar a melhor experiências para o usuário. Para mim, design não é só o que se vê, mas como cada detalhe faz você se sentir.          
+        Combino <span className='transition-all border-b text-neutral-600 duration-500 cursor-default select-none'>design & código</span> para criar as melhores experiências para os usuários. Para mim, design não é só o que se vê, mas como cada detalhe faz você se sentir.          
         </p>
         <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
           Vamos construir algo extraordinário juntos.  <VaulDrawer />
