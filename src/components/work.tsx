@@ -13,7 +13,7 @@ export default function Work() {
             <div className="flex w-full flex-col">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="text-[13.8px] leading-none text-neutral-700 dark:text-neutral-300">
+                  <span className="text-[13.5px] leading-none text-neutral-800 dark:text-neutral-300">
                     {experience.role}
                   </span>
                   <Tooltip text={experience.company}>
