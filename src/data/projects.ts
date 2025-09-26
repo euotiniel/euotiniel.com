@@ -6,13 +6,13 @@ const projects = [
         link: 'https://vbox.euotiniel.com/docs/introduction',
         tech: 'Typescript',
     },
-    {
-        id: 2,
-        name: 'SAPP',
-        description: 'Sistema de Auxílio de Projectos da PAP',
-        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7105292648080404480/',
-        tech: 'Laravel',
-    },
+    // {
+    //     id: 2,
+    //     name: 'SAPP',
+    //     description: 'Sistema de Auxílio de Projectos da PAP',
+    //     link: 'https://www.linkedin.com/feed/update/urn:li:activity:7105292648080404480/',
+    //     tech: 'Laravel',
+    // },
     // {
     //     id: 3,
     //     name: 'Sócia',
