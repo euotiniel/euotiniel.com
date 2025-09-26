@@ -62,7 +62,7 @@ export default function VaulDrawer() {
       <Drawer.Portal>
         <Drawer.Overlay className="font-sans fixed inset-0 bg-black/70" />
         <Drawer.Content className="dark:bg-black bg-white border-t border-neutral-800 flex flex-col fixed bottom-0 left-0 right-0 max-h-[82vh] rounded-t-[10px]">
-          <div className="max-w-md w-full mx-auto overflow-auto p-4 rounded-t-[10px]">
+          <div className="max-w-md w-full mx-auto overflow-auto p-4 rounded-t-[10px] mb-5">
             <Drawer.Handle />
             <Drawer.Title className="mt-5 text-[16.5px] font-semibold leading-7 text-neutral-800 dark:text-neutral-300">
               Deixe a sua mensagem
