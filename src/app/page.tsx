@@ -10,7 +10,7 @@ export default function page() {
         Otoniel Emanuel
       </h1>
       <span className="text-sm font-medium text-neutral-500">
-        Desenvolvedor de Software
+        Software Developer
       </span>
       <div className="mt-6">
        {/*  <p className="text-[14.5px] leading-7 text-neutral-600 dark:text-neutral-400 [&:not(:first-child)]:mt-6">
