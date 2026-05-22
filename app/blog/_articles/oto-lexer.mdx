@@ -1,0 +1,170 @@
+export const metadata = {
+  title: 'Construindo o lexer do oto #2',
+  date: '2026.05.18',
+  description:
+    'Implementação do lexer do oto, incluindo notas sobre tokenização, scanning e representação interna do código.',
+  slug: 'building-the-oto-lexer',
+}
+
+Hoje comecei a estudar e implementar o lexer do oto, que é basicamente a primeira grande fase de codificação da linguagem.
+
+O lexer é responsável por ler o código-fonte bruto e transformar esse texto em tokens. Esses tokens representam as menores unidades reconhecíveis da linguagem. Por exemplo:
+
+```c
+var x = 10;
+```
+
+vira algo como:
+
+```txt
+TOKEN_VAR
+TOKEN_IDENTIFIER
+TOKEN_EQUAL
+TOKEN_NUMBER
+TOKEN_SEMICOLON
+```
+
+Então o lexer não interpreta o programa. Ele apenas reconhece padrões textuais e classifica partes do código. Uma distinção importante é que o lexer NÃO verifica se “isso é uma expressão válida?”. Ele verifica apenas se “isso corresponde a um token válido da linguagem?”.
+
+Por exemplo:
+
+```c
+var x = ;
+```
+
+Mesmo sendo sintaticamente inválido no `oto`, o lexer ainda consegue gerar tokens:
+
+```txt
+TOKEN_VAR
+TOKEN_IDENTIFIER
+TOKEN_EQUAL
+TOKEN_SEMICOLON
+```
+
+Quem vai perceber que “falta uma expressão” será o parser futuramente.
+
+## Tokens
+
+Antes do lexer existir, precisamos definir quais tokens a linguagem possui. Por isso criei um `tokens.md` e depois `token.h` e `token.c`.
+
+Os tokens funcionam como a “linguagem conhecida” pelo lexer. O lexer lê texto bruto e tenta fazer correspondência com esses tokens. Caso o lexer encontre algo que não pertence à linguagem, ele ainda gera um token especial:
+
+```txt
+TOKEN_ERROR
+```
+
+Isso ajuda no sistema de erros e debugging.
+
+Depois dos tokens definidos, começamos a implementar o lexer em si. Nessa fase criamos:
+
+- a struct `Lexer`;
+- funções auxiliares;
+- funções de leitura;
+- funções de validação;
+- funções de scanning.
+
+Tudo isso junto forma o processo de tokenização. O lexer percorre o código caractere por caractere e vai produzindo tokens em sequência.
+
+## Primeiro teste
+
+Ainda não estamos lendo ficheiros `.oto` reais. Por enquanto criamos um source fake diretamente em memória apenas para validar se o lexer consegue identificar corretamente os tokens.
+
+```c
+int main(void) {
+
+    const char* source = "
+        var x = 10;\n
+        write > x + 2;\n
+    ";
+
+    Lexer lexer;
+    initLexer(&lexer, source);
+    Token token;
+
+    do {
+        token = scanToken(&lexer);
+
+        printf(
+            "Tipo: %-15s | Texto: \"%.*s\"\n",
+            tokenTypeToString(token.type),
+            token.length,
+            token.start
+        );
+
+    } while (token.type != TOKEN_EOF 
+                && token.type != TOKEN_ERROR
+            );
+
+    return 0;
+}
+```
+
+E o retorno parece correcto:
+
+```txt
+Tipo: TOKEN_VAR        | Texto: "var"
+Tipo: TOKEN_IDENTIFIER | Texto: "x"
+Tipo: TOKEN_EQUAL      | Texto: "="
+Tipo: TOKEN_NUMBER     | Texto: "10"
+Tipo: TOKEN_SEMICOLON  | Texto: ";"
+Tipo: TOKEN_WRITE      | Texto: "write"
+Tipo: TOKEN_GREATER    | Texto: ">"
+Tipo: TOKEN_IDENTIFIER | Texto: "x"
+Tipo: TOKEN_PLUS       | Texto: "+"
+Tipo: TOKEN_NUMBER     | Texto: "2"
+Tipo: TOKEN_SEMICOLON  | Texto: ";"
+Tipo: TOKEN_EOF        | Texto: ""
+```
+
+Então o lexer já consegue:
+
+- identificar keywords;
+- identificar identifiers;
+- reconhecer símbolos;
+- reconhecer números;
+- gerar `EOF`.
+
+Uma parte que achei interessante de implementar e que descobri enquanto estudava foi:
+
+```c
+%.*s
+```
+
+Isso permite imprimir apenas uma parte da string usando comprimento controlado.
+
+O token não guarda uma string separada. Ele apenas guarda:
+
+- um ponteiro (`start`);
+- um tamanho (`length`).
+
+Então:
+
+```c
+printf("%.*s", token.length, token.start);
+```
+
+significa:
+
+> imprima exactamente N caracteres começando neste ponteiro.
+
+- `.` define a precisão;
+- `*` diz que a precisão virá de um argumento;
+- `s` indica string.
+
+Então:
+
+```txt
+token.start  -> aponta para o começo
+token.length -> diz quantos caracteres imprimir
+```
+
+Isso evita copiar strings no lexer e deixa o scanner mais eficiente.
+
+## Conclusão
+
+Até agora o mais curioso nesse processo tem sido perceber como várias coisas que normalmente parecem “mágicas” nas linguagens acabam sendo bem mecânicas internamente.
+
+O lexer não entende código. Ele não sabe o que é uma variável, uma expressão ou uma instrução válida. Ele apenas percorre bytes, reconhece padrões e produz tokens. E honestamente, isso muda bastante a forma como se olha para uma linguagem de programação.
+
+Ainda é uma fase inicial do `oto`, mas finalmente começa a parecer menos uma ideia abstrata e mais um sistema real sendo construído peça por peça.
+

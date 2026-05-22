@@ -1,0 +1,221 @@
+del {
+  text-decoration-thickness: 1px;
+}
+
+blockquote {
+  box-shadow: 1.5px 0 0 var(--color-rurikon-200) inset;
+  margin-left: 0;
+  border-left: 0;
+  padding-left: 1.25rem;
+}
+
+blockquote + blockquote {
+  display: flow-root;
+}
+
+pre {
+  background-color: #f7f7f7;
+  border: 0.5px solid #dde3ea;
+  overflow-x: auto;
+  padding: 0.950rem 1rem;
+  -webkit-font-smoothing: auto;
+  border-radius: 0.50rem;
+}
+
+pre code {
+  display: inline-block;
+  padding: 0;
+  line-height: 1.40rem;
+  min-width: 100%;
+  width: max-content;
+  white-space: pre;
+  word-break: normal;
+}
+
+code {
+  font-family: var(--mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  word-spacing: -0.15em;
+  padding: 0.15em 0.2em;
+
+
+--shiki-token-comment: hsl(220 10% 34% / 0.7);
+--shiki-token-punctuation: hsl(220 8% 28% / 0.85);
+
+--shiki-token-keyword: #0000b8;
+--shiki-token-function: #003bb5;
+
+--shiki-token-string: #005ca8;
+--shiki-token-string-expression: #1f73c2;
+
+--shiki-token-constant: #0f1d45;
+--shiki-token-link: #003bb5;
+
+--shiki-token-parameter: #3e79c7;
+
+  --shiki-foreground: lab(21 17.74 -56.63);
+}
+
+pre {
+  --shiki-foreground: #414141;
+  --shiki-background: transparent;
+}
+
+pre code {
+  --shiki-foreground: #414141;
+}
+
+code {
+  .line.highlighted {
+    background-color: oklch(0.69 0.17 251.54 / 0.09);
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem;
+    width: calc(100% + 2.5rem);
+    display: inline-block;
+  }
+
+  .highlighted-word {
+    background-color: lab(97 -16.78 110.24 / 0.23);
+    padding: 2px;
+    margin: -2px;
+  }
+}
+
+code span {
+  transition: color 0.2s;
+}
+
+article {
+  figure {
+    margin-top: 1.75rem;
+    line-height: 0;
+  }
+
+  .sidenote-content {
+    img,
+    video,
+    pre {
+      margin: 0;
+    }
+  }
+
+  .no-padding {
+    --frame-padding: 0;
+  }
+
+  .framed > img,
+  .framed > figure > span:first-child {
+    padding: var(--frame-padding, 0.875rem);
+    background: var(--frame-background, #fff);
+    border: 1px solid var(--color-rurikon-border);
+  }
+
+  iframe {
+    width: 100%;
+    border: 1px solid var(--color-rurikon-border);
+    background-color: #fff;
+  }
+
+  details {
+    margin-top: 1.75rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--color-rurikon-border);
+    border-bottom: 1px solid var(--color-rurikon-border);
+  }
+
+  details summary {
+    font-variation-settings: 'wght' 600, var(--sans-variation);
+    margin-bottom: 0.25rem;
+  }
+
+  details summary::marker {
+    content: '';
+  }
+
+  details p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.content-fade-out {
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(0, 0%, 100%, 0.63) 14%,
+    hsla(0, 0%, 100%, 0.36) 29%,
+    hsla(0, 0%, 100%, 0.19) 43%,
+    hsla(0, 0%, 100%, 0.08) 57%,
+    hsla(0, 0%, 100%, 0.02) 71%,
+    hsla(0, 0%, 100%, 0) 86%,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+}
+
+.dot-leaders {
+  text-align: end;
+  height: 1em;
+  overflow: hidden;
+  word-wrap: break-word;
+  letter-spacing: 6px;
+}
+
+.dot-leaders::after {
+  content: '······································································';
+}
+
+@supports (view-transition-name: none) {
+  @media not (prefers-reduced-motion: reduce) {
+    ::view-transition-old(crossfade) {
+      animation: hide 0.4s cubic-bezier(0.6, 0, 0.8, 1) forwards;
+    }
+
+    ::view-transition-new(crossfade) {
+      opacity: 0;
+      animation: appear .6s ease 0.2s forwards;
+    }
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+div[data-codice-editor] {
+  --codice-font-family: var(--mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  --sh-class: hsl(215deg 32% 26%);
+  --sh-sign: hsl(215deg 32% 37% / 65%);
+  --sh-keyword: oklch(0.25 0.09 256.57 / 0.65);
+  --sh-property: oklch(0.46 0.22 259.43);
+
+  code {
+    white-space: pre-wrap;
+    word-spacing: 0 !important;
+    font-feature-settings: var(--font-features);
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-rurikon-border);
+  margin: 3rem 0;
+}

@@ -1,0 +1,127 @@
+export const metadata = {
+  title: 'Construindo um compilador #1',
+  date: '2026.05.16',
+  description:
+    'Idealização e os primeiros passos na construção de um compilador (oto)',
+  slug: 'building-a-compiler-part-1',
+}
+
+Todo programador, em algum momento, já teve vontade de criar a sua própria linguagem de programação. Eu também já quis, várias vezes, mas nunca soube exatamente por onde começar, nem porquê. Desta vez, o foco era diferente: eu queria perceber compiladores.
+
+Não ia fazer um compilador para C, nem nenhuma outra linguagem. A via mais simples pareceu-me criar uma estrutura pequena, uma linguagem nova. Foi assim que nasceu a ideia do `oto`, [um compilador para a linguagem oto](https://github.com/euotiniel/oto), escrito em C, só para ver até onde dava para chegar.
+
+Embora a primeira fase do `oto` ainda não seja sobre construir um compilador completo, uma coisa ficou clara: criar uma linguagem não começa com parser, nem com geração de código. Antes de existir compilação, bytecode, ASTs ou máquinas virtuais, é preciso definir a própria linguagem, decidir formalmente o que é válido e o que não é. E é exatamente isso que a gramática resolve.
+
+## A gramática
+
+Uma das primeiras descobertas dessa fase foi perceber que linguagens de programação são descritas através de sistemas formais de gramática. No caso do `oto`, a notação escolhida foi [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) (Extended Backus-Naur Form).
+
+EBNF não é uma linguagem de programação. É apenas uma forma padronizada de descrever regras sintáticas. E uma coisa curiosa é que ela não tem exatamente palavras reservadas próprias, os nomes usados para definir as regras são arbitrários, criados pelo designer da linguagem para representar estruturas conceituais.
+
+Exemplo:
+
+```txt
+writeStmt -> "write" ">" expression ";"
+```
+Essa regra descreve formalmente um `write statement`. Ela diz que um `writeStmt` começa com a palavra `write`, seguida do símbolo `>`, seguido de uma `expressão`, e termina com `;`.
+
+Então algo como:
+
+```txt
+write > x + 10;
+```
+passa a ser considerado sintaticamente válido. Ou seja: a gramática não é código executável. Ela funciona como um mapa formal da linguagem.
+
+## O papel dos tokens
+
+Se a gramática é o mapa, os tokens são as peças que encaixamos nele. Pensa na gramática como a forma de organizar peças de LEGO, e os tokens seriam as peças em si, cada uma com seu formato, seu encaixe, sua cor.
+
+Depois da gramática, surge outro ponto importante: como transformar texto bruto em algo que o compilador consiga entender? É aqui que entram os tokens.
+
+O lexer é responsável por ler caracteres do código-fonte e transformá-los em unidades simbólicas chamadas tokens.
+
+Exemplo:
+
+```txt
+var x = 10;
+```
+
+vira algo como:
+
+```txt
+VAR
+IDENTIFIER(x)
+EQUAL
+NUMBER(10)
+SEMICOLON
+EOF
+```
+
+Nesse momento, o parser já não trabalha diretamente com texto cru. Ele passa a trabalhar com símbolos organizados semanticamente. Isso é extremamente importante porque analisar caracteres, espaços, números e palavras diretamente seria muito mais complexo.
+
+O arquivo `token.md` existe justamente para definir:
+
+- quais tokens existem;
+- como eles devem ser reconhecidos;
+- qual significado possuem.
+
+Na prática, o sistema de tokens se torna o "vocabulário interno" da linguagem.
+
+## O problema da precedência matemática
+
+Uma das primeiras dificuldades encontradas durante a criação da gramática foi a questão da precedência de operadores.
+
+Considere:
+
+```txt
+10 + 20 * 3
+```
+
+Qualquer pessoa que teve o mínimo contato com matemática básica entende intuitivamente que a multiplicação deve acontecer antes da soma. O resultado esperado é 70, e não 90.
+
+O problema é que a linguagem não sabe disso naturalmente. Essa prioridade precisa ser modelada explicitamente.
+
+A abordagem clássica usada em muitos compiladores é dividir expressões em níveis hierárquicos:
+
+```txt
+expression -> term
+term       -> factor (("+" | "-") factor)*
+factor     -> primary (("*" | "/") primary)*
+primary    -> NUMBER | IDENTIFIER
+```
+
+Esse é o modelo tradicional, ensinado em livros como o _Dragon Book_. Inicialmente, essa estrutura me pareceu estranha e excessivamente abstrata. Foi aí que comecei a pensar em formas mais perceptíveis de definir essa gramática, por coincidência, acabei "inventando" informalmente uma abordagem que já existia, muito mais bem elaborada: o Pratt Parsing.
+
+Isso melhorou bastante a minha ideia inicial. Em vez de colocar toda a precedência dentro da gramática, o parser pode controlar a precedência dinamicamente através de uma tabela interna.
+
+Nesse modelo, a gramática parece mais simples de entender:
+
+```txt
+expression -> expression operator expression
+           | "(" expression ")"
+           | NUMBER
+           | STRING
+           | IDENTIFIER
+```
+
+E a precedência é controlada por uma tabela de prioridade:
+
+```txt
+* / -> maior precedência
++ - -> menor precedência
+```
+
+Ao analisar `10 + 20 * 3`, o parser entende dinamicamente que `20 * 3` deve ser resolvido antes de `10 +`. Mesmo com a gramática plana.
+
+E para os casos em que precisamos forçar ou burlar essa precedência, adicionamos os parênteses que forçam a operação interna a acontecer primeiro.
+
+O próximo passo será implementar o lexer: ler código-fonte real, gerar tokens, validar a gramática contra programas reais. Só depois disso o parser e o restante da arquitetura do compilador começarão a surgir.
+
+## Conclusão
+
+Tem sido interessante estudar e implementar isso, apesar do pouco tempo disponível. Uma coisa que fica clara é que não parece impossível. Não estou a criar algo revolucionário e nem é essa a intenção, mas consigo perceber, ainda que de forma razoável, como é o processo por trás da criação de linguagens.
+
+A gramática e os tokens não são fases do compilador em si, são o alicerce sobre o qual tudo será construído. São a documentação viva que guia cada decisão de implementação. E, curiosamente, são também a parte mais subestimada por quem nunca tentou criar uma linguagem.
+
+É como construir uma casa: antes dos tijolos, antes do cimento, antes das paredes, existe a planta. E é exatamente isso que estou a estudar e a desenhar agora.
+

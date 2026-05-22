@@ -1,0 +1,57 @@
+body {
+  font-synthesis: none;
+  font-family: var(--sans), system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-feature-settings: var(--font-features);
+  font-variation-settings: 'wght' 440, var(--sans-variation);
+  font-variant: common-ligatures contextual;
+  text-decoration-skip-ink: auto;
+  text-spacing-trim: space-first;
+  font-optical-sizing: auto;
+  letter-spacing: 0.0085em;
+  word-spacing: -0.04em;
+  background-color: var(--background);
+  text-rendering: geometricPrecision;
+  text-autospace: normal;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+i,
+em,
+blockquote,
+nav,
+.sidenote {
+  font-family: var(--sans);
+  font-style: initial;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wght' 480, var(--sans-variation);
+  font-weight: 400;
+  font-variant-ligatures: contextual;
+  letter-spacing: -0.006em;
+}
+
+i,
+em,
+blockquote,
+.sidenote {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wght' 480, var(--sans-variation);
+  font-weight: 400;
+  font-variant-ligatures: contextual;
+  letter-spacing: -0.006em;
+}
+
+main {
+  hanging-punctuation: first allow-end last;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 6 6;
+}
+
+.text-wrap-balance {
+  text-wrap: balance;
+}

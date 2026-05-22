@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@source "../mdx-components.tsx";
+
+@import '../styles/theme.css';
+@import '../styles/base.css';
+@import '../styles/content.css';

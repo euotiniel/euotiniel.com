@@ -1,0 +1,68 @@
+@layer utilities {
+  .font-thin {
+    font-variation-settings: 'wght' 100, var(--sans-variation);
+  }
+  .font-extralight {
+    font-variation-settings: 'wght' 200, var(--sans-variation);
+  }
+  .font-light {
+    font-variation-settings: 'wght' 300, var(--sans-variation);
+  }
+  .font-normal {
+    font-variation-settings: 'wght' 440, var(--sans-variation);
+  }
+  .font-medium {
+    font-variation-settings: 'wght' 500, var(--sans-variation);
+  }
+  .font-semibold {
+    font-variation-settings: 'wght' 600, var(--sans-variation);
+  }
+  .font-bold {
+    font-variation-settings: 'wght' 640, var(--sans-variation);
+  }
+  .font-extrabold {
+    font-variation-settings: 'wght' 700, var(--sans-variation);
+  }
+  .font-black {
+    font-variation-settings: 'wght' 800, var(--sans-variation);
+  }
+}
+
+@theme {
+  --color-rurikon-50: #ebedef;
+  --color-rurikon-100: #d8dbdf;
+  --color-rurikon-200: #b3b9c1;
+  --color-rurikon-300: #8c95a1;
+  --color-rurikon-400: #697381;
+  --color-rurikon-500: #4a515b;
+  --color-rurikon-600: #3b4149;
+  --color-rurikon-700: #2b3035;
+  --color-rurikon-800: #1e2125;
+  --color-rurikon-900: #0e0f11;
+  --color-rurikon-950: #07080a;
+
+  --color-rurikon-border: #d8dbdfb3;
+
+  --font-sans: var(--sans), -apple-system, ui-sans-serif, system-ui,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --font-serif: var(--serif), ui-serif, Georgia, Cambria,
+    'Times New Roman', Times, serif;
+  --font-mono: var(--mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-zh: var(--zh), var(--sans), -apple-system, ui-sans-serif, system-ui,
+    'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', sans-serif;
+
+  --breakpoint-text: 1220px;
+  --breakpoint-mobile: 420px;
+}
+
+:root {
+  --background: #fcfcfc;
+}
+
+:root {
+  --sans-variation: 'opsz' 32;
+  --font-features: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03',
+    'liga', 'ordn';
+}
