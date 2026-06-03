@@ -37,7 +37,24 @@ export default async function Page(props: {
         <p className="text-[14.9px] md:text-center leading-6 text-neutral-600 ">
           {metadata.description}
         </p>
+         <svg
+      viewBox="0 0 600 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full max-w-md h-4 opacity-4 mt-5"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 6 Q30 2, 60 6 T120 6 T180 6 T240 6 T300 6 T360 6 T420 6 T480 6 T540 6 T600 6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
+    </svg>
       </header>
+
+     
 
       <article>
         <MDXContent />
