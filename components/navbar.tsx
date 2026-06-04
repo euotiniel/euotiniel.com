@@ -8,8 +8,9 @@ export default function Navbar() {
 
   const links = [
     { href: '/', label: 'index' },
-    { href: '/projects', label: 'projects' },
+    { href: '/projects', label: 'projectos' },
     { href: '/blog', label: 'blog' },
+    { href: '/me', label: 'eu' },
     // { href: '/about', label: 'about' },
   ]
 
