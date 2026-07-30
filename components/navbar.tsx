@@ -23,7 +23,7 @@ export default function Navbar() {
           {links.map(({ href, label }) => {
             const isActive = pathname === href
             return (
-              <li key={href}>
+              <li key={href} className="text-sm">
                 <Link
                   href={href}
                   className={`transition-colors ${

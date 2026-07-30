@@ -52,7 +52,7 @@ export default async function Page() {
       <Navbar />
       <main className="mt-8">
         <h1 className="font-semibold mb-7 text-black">Blog</h1>
-        <p className="my-7 text-justify text-neutral-700 text-[15.6px]">O Lucas Montano fez um react (não js) ao meu artigo, <Link href="https://www.youtube.com/watch?v=teU_RL7QOT4&t=15s" className="text-[#0000EE] underline underline-offset-2 decoration-[#0000EE]" target="_blank">assista aqui</Link>. Você também pode encontrar artigos menos técnicos no meu <Link href="https://substack.com/@euotiniel" className="text-[#0000EE] underline underline-offset-2 decoration-[#0000EE]" target="_blank">substack</Link>.</p>
+        <p className="my-7 text-justify text-neutral-700 text-[15.6px]">Lucas Montano fez um React <span className="line-through">(não js)</span> do meu artigo, <Link href="https://www.youtube.com/watch?v=teU_RL7QOT4&t=15s" className="text-[#0000EE] underline underline-offset-2 decoration-[#0000EE]" target="_blank">assista</Link>. Também poderá encontrar artigos menos técnicos no meu <Link href="https://substack.com/@euotiniel" className="text-[#0000EE] underline underline-offset-2 decoration-[#0000EE]" target="_blank">substack</Link>.</p>
         <ul className="space-y-5">
           {articles.map(({ slug, title, displayDate }) => (
             <li key={slug}>

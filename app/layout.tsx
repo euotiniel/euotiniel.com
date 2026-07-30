@@ -31,8 +31,6 @@ export default function RootLayout({
     <html lang="pt">
       <body
         className={cn(
-          sans.variable,
-          mono.variable,
           "text-14 leading-6 sm:text-[15px] sm:leading-7 md:text-base md:leading-7",
           "text-rurikon-600",
         )}
