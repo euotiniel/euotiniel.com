@@ -35,7 +35,7 @@ export default async function OpenGraphImage(props: {
           background: '#f8f8f6',
           color: '#111',
           fontFamily: 'Inter',
-          padding: 20,
+          padding: 0,
         }}
       >
         <div
@@ -48,7 +48,7 @@ export default async function OpenGraphImage(props: {
             border: '1px solid #e3e0d8',
             padding: '49px 55px',
             background: '#fcfcfb',
-            borderRadius: '20'
+            borderRadius: '0'
           }}
         >
           <div
@@ -84,21 +84,6 @@ export default async function OpenGraphImage(props: {
             >
               {metadata.title}
             </h1>
-
-            {metadata.description && (
-              <p
-                style={{
-                  margin: 0,
-                  maxWidth: 760,
-                  fontSize: 28,
-                  lineHeight: 1.35,
-                  letterSpacing: -1.2,
-                  color: '#4a515b',
-                }}
-              >
-                {metadata.description}
-              </p>
-            )}
           </div>
 
           <div
